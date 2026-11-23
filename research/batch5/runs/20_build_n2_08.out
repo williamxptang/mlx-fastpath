@@ -1,0 +1,8 @@
+model.safetensors written (2s)
+optiq_vision.safetensors written (2s)
+{"converted": 37, "dst": "~/models/Qwen3.5-0.8B-OptiQ-4bit/optiq_mixed-N2-gdnhead", "seconds": 2}
+{
+ "n2": "~/models/Qwen3.5-0.8B-OptiQ-4bit/optiq_mixed-N2-gdnhead",
+ "problems": []
+}
+exit=0

@@ -1,0 +1,14 @@
+== with the fix
+<frozen importlib._bootstrap>:488
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+3 passed, 2 warnings in 8.05s
+== without the fix (optiq's own measure_draft_cost swapped back in)
+E       AssertionError: precondition: the head was priced (drafted at least once)
+E       assert []
+E        +  where [] = <test_draft_cost.StandInHead object at 0x11d5e9010>.widths
+E       assert ([])
+E        +  where [] = <test_draft_cost.StandInHead object at 0x11d6387d0>.widths
+FAILED tests/test_draft_cost.py::test_pricing_the_head_leaves_the_live_cache_as_it_was
+FAILED tests/test_draft_cost.py::test_pricing_the_head_drafts_from_the_models_hidden_width
+2 failed, 1 passed, 1 warning in 0.67s

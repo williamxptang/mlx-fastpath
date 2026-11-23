@@ -1,0 +1,31 @@
+loaded, footprint peak so far 7.2 has_mtp True
+{"prompt_tokens": 32, "config": "AR", "tok_s": 17.91, "accept": null, "tokens": 160, "same_text_as_AR": true, "common_prefix_chars": 681, "of_chars": 681, "vocab_coverage_of_AR_tokens": {"16384": 0.931, "32768": 0.981, "65536": 0.994}, "peak_footprint_gb": 7.99}
+{"prompt_tokens": 32, "config": "AR+q4kv+fold", "tok_s": 17.45, "accept": null, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 226, "of_chars": 681, "peak_footprint_gb": 7.99}
+{"prompt_tokens": 32, "config": "MTP1", "tok_s": 22.48, "accept": 0.656, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 273, "of_chars": 681, "peak_footprint_gb": 8.2}
+{"prompt_tokens": 32, "config": "MTP2", "tok_s": 22.94, "accept": 0.519, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 273, "of_chars": 681, "peak_footprint_gb": 8.41}
+{"prompt_tokens": 32, "config": "MTP1+cap", "tok_s": 23.26, "accept": 0.656, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 273, "of_chars": 681, "peak_footprint_gb": 8.5}
+{"prompt_tokens": 32, "config": "MTP2+cap", "tok_s": 24.87, "accept": 0.519, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 273, "of_chars": 681, "peak_footprint_gb": 8.5}
+{"prompt_tokens": 32, "config": "MTP1+cap+vocab32k", "tok_s": 27.11, "accept": 0.674, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 273, "of_chars": 681, "peak_footprint_gb": 8.5}
+{"prompt_tokens": 32, "config": "MTP2+cap+vocab32k", "tok_s": 30.75, "accept": 0.532, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 273, "of_chars": 681, "peak_footprint_gb": 8.5}
+{"prompt_tokens": 32, "config": "MTP3+cap+vocab32k+fold", "tok_s": 28.52, "accept": 0.373, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 248, "of_chars": 681, "peak_footprint_gb": 8.65}
+{"prompt_tokens": 32, "config": "MTP2+cap+vocab32k+fold+q4kv", "tok_s": 30.29, "accept": 0.526, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 226, "of_chars": 681, "peak_footprint_gb": 8.65}
+{"prompt_tokens": 4031, "config": "AR", "tok_s": 17.24, "accept": null, "tokens": 160, "same_text_as_AR": true, "common_prefix_chars": 605, "of_chars": 605, "vocab_coverage_of_AR_tokens": {"16384": 0.8, "32768": 0.881, "65536": 0.988}, "peak_footprint_gb": 8.65}
+{"prompt_tokens": 4031, "config": "AR+q4kv+fold", "tok_s": 17.05, "accept": null, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 174, "of_chars": 605, "peak_footprint_gb": 8.65}
+{"prompt_tokens": 4031, "config": "MTP1", "tok_s": 20.98, "accept": 0.59, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 43, "of_chars": 605, "peak_footprint_gb": 8.65}
+{"prompt_tokens": 4031, "config": "MTP2", "tok_s": 19.51, "accept": 0.414, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 43, "of_chars": 605, "peak_footprint_gb": 8.65}
+{"prompt_tokens": 4031, "config": "MTP1+cap", "tok_s": 22.51, "accept": 0.59, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 43, "of_chars": 605, "peak_footprint_gb": 8.66}
+{"prompt_tokens": 4031, "config": "MTP2+cap", "tok_s": 21.9, "accept": 0.414, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 43, "of_chars": 605, "peak_footprint_gb": 8.66}
+{"prompt_tokens": 4031, "config": "MTP1+cap+vocab32k", "tok_s": 23.67, "accept": 0.5, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 43, "of_chars": 605, "peak_footprint_gb": 8.66}
+{"prompt_tokens": 4031, "config": "MTP2+cap+vocab32k", "tok_s": 25.29, "accept": 0.364, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 43, "of_chars": 605, "peak_footprint_gb": 8.66}
+{"prompt_tokens": 4031, "config": "MTP3+cap+vocab32k+fold", "tok_s": 23.77, "accept": 0.242, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 43, "of_chars": 605, "peak_footprint_gb": 8.66}
+{"prompt_tokens": 4031, "config": "MTP2+cap+vocab32k+fold+q4kv", "tok_s": 25.29, "accept": 0.368, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 174, "of_chars": 605, "peak_footprint_gb": 8.66}
+{"prompt_tokens": 8031, "config": "AR", "tok_s": 16.86, "accept": null, "tokens": 160, "same_text_as_AR": true, "common_prefix_chars": 623, "of_chars": 623, "vocab_coverage_of_AR_tokens": {"16384": 0.794, "32768": 0.894, "65536": 0.975}, "peak_footprint_gb": 8.66}
+{"prompt_tokens": 8031, "config": "AR+q4kv+fold", "tok_s": 16.74, "accept": null, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 46, "of_chars": 623, "peak_footprint_gb": 8.66}
+{"prompt_tokens": 8031, "config": "MTP1", "tok_s": 20.8, "accept": 0.59, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 134, "of_chars": 623, "peak_footprint_gb": 8.66}
+{"prompt_tokens": 8031, "config": "MTP2", "tok_s": 19.06, "accept": 0.414, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 134, "of_chars": 623, "peak_footprint_gb": 8.66}
+{"prompt_tokens": 8031, "config": "MTP1+cap", "tok_s": 21.4, "accept": 0.59, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 134, "of_chars": 623, "peak_footprint_gb": 8.66}
+{"prompt_tokens": 8031, "config": "MTP2+cap", "tok_s": 21.1, "accept": 0.414, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 134, "of_chars": 623, "peak_footprint_gb": 8.66}
+{"prompt_tokens": 8031, "config": "MTP1+cap+vocab32k", "tok_s": 23.78, "accept": 0.59, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 134, "of_chars": 623, "peak_footprint_gb": 8.66}
+{"prompt_tokens": 8031, "config": "MTP2+cap+vocab32k", "tok_s": 25.43, "accept": 0.393, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 134, "of_chars": 623, "peak_footprint_gb": 8.66}
+{"prompt_tokens": 8031, "config": "MTP3+cap+vocab32k+fold", "tok_s": 24.39, "accept": 0.294, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 134, "of_chars": 623, "peak_footprint_gb": 8.66}
+{"prompt_tokens": 8031, "config": "MTP2+cap+vocab32k+fold+q4kv", "tok_s": 21.56, "accept": 0.272, "tokens": 160, "same_text_as_AR": false, "common_prefix_chars": 46, "of_chars": 623, "peak_footprint_gb": 8.66}

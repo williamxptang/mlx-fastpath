@@ -1,0 +1,20 @@
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (315657 > 262144). Running this sequence through the model will result in indexing errors
+{"N": 4096, "mode": "stock_512_all_logits", "s": 6.67, "tok_s": 614, "mlx_peak_gb": 7.81}
+{"N": 4096, "mode": "last_logit_256", "s": 5.25, "tok_s": 781, "speedup": 1.27, "mlx_peak_gb": 7.65, "final_argmax_same": true, "final_logit_maxdiff": 0.344}
+{"N": 4096, "mode": "last_logit_512", "s": 4.99, "tok_s": 821, "speedup": 1.34, "mlx_peak_gb": 7.63, "final_argmax_same": true, "final_logit_maxdiff": 0.062}
+{"N": 4096, "mode": "last_logit_1024", "s": 4.9, "tok_s": 836, "speedup": 1.36, "mlx_peak_gb": 7.88, "final_argmax_same": true, "final_logit_maxdiff": 0.25}
+{"N": 4096, "mode": "last_logit_2048", "s": 4.97, "tok_s": 825, "speedup": 1.34, "mlx_peak_gb": 8.05, "final_argmax_same": true, "final_logit_maxdiff": 0.25}
+{"N": 4096, "mode": "last_logit_4096", "s": 7.17, "tok_s": 572, "speedup": 0.93, "mlx_peak_gb": 8.71, "final_argmax_same": true, "final_logit_maxdiff": 0.391}
+{"N": 16384, "mode": "stock_512_all_logits", "s": 26.13, "tok_s": 627, "mlx_peak_gb": 8.2}
+{"N": 16384, "mode": "last_logit_256", "s": 23.05, "tok_s": 711, "speedup": 1.13, "mlx_peak_gb": 8.12, "final_argmax_same": true, "final_logit_maxdiff": 0.25}
+{"N": 16384, "mode": "last_logit_512", "s": 22.31, "tok_s": 734, "speedup": 1.17, "mlx_peak_gb": 8.24, "final_argmax_same": true, "final_logit_maxdiff": 0.062}
+{"N": 16384, "mode": "last_logit_1024", "s": 21.23, "tok_s": 772, "speedup": 1.23, "mlx_peak_gb": 8.03, "final_argmax_same": true, "final_logit_maxdiff": 0.312}
+{"N": 16384, "mode": "last_logit_2048", "s": 21.9, "tok_s": 748, "speedup": 1.19, "mlx_peak_gb": 8.21, "final_argmax_same": true, "final_logit_maxdiff": 0.219}
+{"N": 16384, "mode": "last_logit_4096", "s": 30.17, "tok_s": 543, "speedup": 0.87, "mlx_peak_gb": 9.09, "final_argmax_same": true, "final_logit_maxdiff": 0.188}
+{"N": 32768, "mode": "stock_512_all_logits", "s": 67.85, "tok_s": 483, "mlx_peak_gb": 8.55}
+{"N": 32768, "mode": "last_logit_256", "s": 60.74, "tok_s": 539, "speedup": 1.12, "mlx_peak_gb": 8.43, "final_argmax_same": true, "final_logit_maxdiff": 0.367}
+{"N": 32768, "mode": "last_logit_512", "s": 55.03, "tok_s": 595, "speedup": 1.23, "mlx_peak_gb": 8.55, "final_argmax_same": true, "final_logit_maxdiff": 0.062}
+{"N": 32768, "mode": "last_logit_1024", "s": 49.36, "tok_s": 664, "speedup": 1.37, "mlx_peak_gb": 8.32, "final_argmax_same": true, "final_logit_maxdiff": 0.25}
+{"N": 32768, "mode": "last_logit_2048", "s": 50.81, "tok_s": 645, "speedup": 1.34, "mlx_peak_gb": 8.73, "final_argmax_same": true, "final_logit_maxdiff": 0.266}
+{"N": 32768, "mode": "last_logit_4096", "s": 64.43, "tok_s": 509, "speedup": 1.05, "mlx_peak_gb": 9.59, "final_argmax_same": true, "final_logit_maxdiff": 0.266}
+         11044379344  peak memory footprint

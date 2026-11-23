@@ -1,0 +1,22 @@
+{"N": 4096, "qL": 1, "before_ms": 57.57, "after_ms": 57.27, "speedup": 1.005, "argmax_same": true, "max_logit_diff": 0.0, "control_diff": 0.0, "prefill_s": 4.8}
+{"N": 4096, "qL": 3, "before_ms": 58.48, "after_ms": 58.57, "speedup": 0.998, "argmax_same": true, "max_logit_diff": 0.0, "control_diff": 0.0, "prefill_s": 4.8}
+{"N": 4096, "qL": 4, "before_ms": 59.58, "after_ms": 59.55, "speedup": 1.0, "argmax_same": false, "max_logit_diff": 0.1562, "control_diff": 0.0, "prefill_s": 4.8}
+{"N": 4096, "qL": 6, "before_ms": 75.41, "after_ms": 74.21, "speedup": 1.016, "argmax_same": true, "max_logit_diff": 0.0938, "control_diff": 0.0, "prefill_s": 4.8}
+{"N": 4096, "qL": 8, "before_ms": 88.77, "after_ms": 87.06, "speedup": 1.02, "argmax_same": true, "max_logit_diff": 0.125, "control_diff": 0.0, "prefill_s": 4.8}
+{"N": 4096, "qL": 12, "before_ms": 130.94, "after_ms": 126.84, "speedup": 1.032, "argmax_same": true, "max_logit_diff": 0.125, "control_diff": 0.0, "prefill_s": 4.8}
+{"N": 4096, "qL": 16, "before_ms": 122.05, "after_ms": 120.76, "speedup": 1.011, "argmax_same": true, "max_logit_diff": 0.0, "control_diff": 0.0, "prefill_s": 4.8}
+{"N": 16384, "qL": 1, "before_ms": 60.73, "after_ms": 60.62, "speedup": 1.002, "argmax_same": true, "max_logit_diff": 0.0, "control_diff": 0.0, "prefill_s": 20.3}
+{"N": 16384, "qL": 3, "before_ms": 63.19, "after_ms": 63.14, "speedup": 1.001, "argmax_same": true, "max_logit_diff": 0.0, "control_diff": 0.0, "prefill_s": 20.3}
+{"N": 16384, "qL": 4, "before_ms": 65.22, "after_ms": 63.82, "speedup": 1.022, "argmax_same": true, "max_logit_diff": 0.1875, "control_diff": 0.0, "prefill_s": 20.3}
+{"N": 16384, "qL": 6, "before_ms": 83.89, "after_ms": 78.92, "speedup": 1.063, "argmax_same": true, "max_logit_diff": 0.2148, "control_diff": 0.0, "prefill_s": 20.3}
+{"N": 16384, "qL": 8, "before_ms": 99.58, "after_ms": 91.39, "speedup": 1.09, "argmax_same": true, "max_logit_diff": 0.0938, "control_diff": 0.0, "prefill_s": 20.3}
+{"N": 16384, "qL": 12, "before_ms": 148.61, "after_ms": 131.79, "speedup": 1.128, "argmax_same": true, "max_logit_diff": 0.125, "control_diff": 0.0, "prefill_s": 20.3}
+{"N": 16384, "qL": 16, "before_ms": 130.5, "after_ms": 126.29, "speedup": 1.033, "argmax_same": true, "max_logit_diff": 0.0, "control_diff": 0.0, "prefill_s": 20.3}
+{"N": 32768, "qL": 1, "before_ms": 67.76, "after_ms": 67.64, "speedup": 1.002, "argmax_same": true, "max_logit_diff": 0.0, "control_diff": 0.0, "prefill_s": 49.7}
+{"N": 32768, "qL": 3, "before_ms": 75.72, "after_ms": 75.62, "speedup": 1.001, "argmax_same": true, "max_logit_diff": 0.0, "control_diff": 0.0, "prefill_s": 49.7}
+{"N": 32768, "qL": 4, "before_ms": 80.39, "after_ms": 70.96, "speedup": 1.133, "argmax_same": true, "max_logit_diff": 0.0938, "control_diff": 0.0, "prefill_s": 49.7}
+{"N": 32768, "qL": 6, "before_ms": 105.12, "after_ms": 86.01, "speedup": 1.222, "argmax_same": true, "max_logit_diff": 0.1309, "control_diff": 0.0, "prefill_s": 49.7}
+{"N": 32768, "qL": 8, "before_ms": 126.2, "after_ms": 98.5, "speedup": 1.281, "argmax_same": true, "max_logit_diff": 0.1562, "control_diff": 0.0, "prefill_s": 49.7}
+{"N": 32768, "qL": 12, "before_ms": 172.84, "after_ms": 139.88, "speedup": 1.236, "argmax_same": true, "max_logit_diff": 0.1968, "control_diff": 0.0, "prefill_s": 49.7}
+{"N": 32768, "qL": 16, "before_ms": 143.66, "after_ms": 136.86, "speedup": 1.05, "argmax_same": true, "max_logit_diff": 0.0, "control_diff": 0.0, "prefill_s": 49.7}
+calls {'fold': 1200, 'orig': 480} PEAK_GB 9.01

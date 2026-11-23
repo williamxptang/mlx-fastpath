@@ -1,0 +1,238 @@
+09:49:36 PHASE kl: 4 jobs
+09:49:36 START kl-ref-source: free 9.5 GB, cap 8.5 GB, expected peak 8.1 GB
+09:50:52 END kl-ref-source: ok, 0 rows, 76s, peak 7.97 GB
+09:50:52 START kl-control-source: free 12.2 GB, cap 11.2 GB, expected peak 8.1 GB
+09:51:11 END kl-control-source: ok, 4 rows, 19s, peak 7.73 GB
+09:51:11 START kl-n2-gdnhead: free 12.2 GB, cap 11.2 GB, expected peak 7.2 GB
+09:51:30 END kl-n2-gdnhead: ok, 4 rows, 18s, peak 7.5 GB
+09:51:30 START kl-n2-all: free 12.0 GB, cap 11.0 GB, expected peak 6.6 GB
+09:51:47 END kl-n2-all: ok, 4 rows, 17s, peak 6.83 GB
+09:51:47 PHASE kl done: ok x4
+09:51:58 PHASE dflash: 4 jobs
+09:51:58 START dflash-plain-0: free 11.7 GB, cap 10.7 GB, expected peak 8.3 GB
+09:52:33 END dflash-plain-0: ok, 3 rows, 35s, peak 8.67 GB
+09:52:33 START dflash-idset-1: free 12.3 GB, cap 11.3 GB, expected peak 8.3 GB
+09:53:08 END dflash-idset-1: ok, 3 rows, 36s, peak 8.67 GB
+09:53:08 START dflash-idset-2: free 12.5 GB, cap 11.5 GB, expected peak 8.3 GB
+09:53:43 END dflash-idset-2: ok, 3 rows, 35s, peak 8.82 GB
+09:53:43 START dflash-plain-3: free 12.4 GB, cap 11.4 GB, expected peak 8.3 GB
+09:54:20 END dflash-plain-3: ok, 3 rows, 37s, peak 8.42 GB
+09:54:20 PHASE dflash done: ok x4
+09:54:22 PHASE speed: 16 jobs
+09:54:22 START speed-AR-Qwen3.5-9B-OptiQ-4bit-0: free 12.2 GB, cap 11.2 GB, expected peak 8.1 GB
+09:55:35 END speed-AR-Qwen3.5-9B-OptiQ-4bit-0: ok, 3 rows, 72s, peak 7.92 GB
+09:55:35 START speed-A-Qwen3.5-9B-OptiQ-4bit-1: free 12.2 GB, cap 11.2 GB, expected peak 8.1 GB
+09:56:23 END speed-A-Qwen3.5-9B-OptiQ-4bit-1: ok, 3 rows, 49s, peak 8.14 GB
+09:56:23 START speed-AR-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-2: free 12.3 GB, cap 11.3 GB, expected peak 7.2 GB
+09:57:27 END speed-AR-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-2: ok, 3 rows, 63s, peak 7.15 GB
+09:57:27 START speed-A-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-3: free 12.1 GB, cap 11.1 GB, expected peak 7.2 GB
+09:58:11 END speed-A-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-3: ok, 3 rows, 44s, peak 6.92 GB
+09:58:11 START speed-AR-Qwen3.5-9B-OptiQ-4bit-N2-all-4: free 12.2 GB, cap 11.2 GB, expected peak 6.6 GB
+09:59:11 END speed-AR-Qwen3.5-9B-OptiQ-4bit-N2-all-4: ok, 3 rows, 60s, peak 6.79 GB
+09:59:11 START speed-A-Qwen3.5-9B-OptiQ-4bit-N2-all-5: free 11.6 GB, cap 10.6 GB, expected peak 6.6 GB
+09:59:53 END speed-A-Qwen3.5-9B-OptiQ-4bit-N2-all-5: ok, 3 rows, 43s, peak 6.21 GB
+09:59:53 START speed-A-Qwen3.5-9B-OptiQ-4bit-N2-all-6: free 11.6 GB, cap 10.6 GB, expected peak 6.6 GB
+10:00:36 END speed-A-Qwen3.5-9B-OptiQ-4bit-N2-all-6: ok, 3 rows, 43s, peak 6.29 GB
+10:00:36 START speed-AR-Qwen3.5-9B-OptiQ-4bit-N2-all-7: free 11.7 GB, cap 10.7 GB, expected peak 6.6 GB
+10:01:36 END speed-AR-Qwen3.5-9B-OptiQ-4bit-N2-all-7: ok, 3 rows, 60s, peak 6.55 GB
+10:01:36 START speed-A-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-8: free 11.7 GB, cap 10.7 GB, expected peak 7.2 GB
+10:02:21 END speed-A-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-8: ok, 3 rows, 45s, peak 7.28 GB
+10:02:21 START speed-AR-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-9: free 12.0 GB, cap 11.0 GB, expected peak 7.2 GB
+10:03:25 END speed-AR-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-9: ok, 3 rows, 64s, peak 7.21 GB
+10:03:25 START speed-A-Qwen3.5-9B-OptiQ-4bit-10: free 11.9 GB, cap 10.9 GB, expected peak 8.1 GB
+10:04:17 END speed-A-Qwen3.5-9B-OptiQ-4bit-10: ok, 3 rows, 52s, peak 7.68 GB
+10:04:17 START speed-AR-Qwen3.5-9B-OptiQ-4bit-11: free 12.2 GB, cap 11.2 GB, expected peak 8.1 GB
+10:05:29 END speed-AR-Qwen3.5-9B-OptiQ-4bit-11: ok, 3 rows, 72s, peak 7.95 GB
+10:05:29 START task-needle4k-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead: free 12.2 GB, cap 11.2 GB, expected peak 8.3 GB
+10:06:07 END task-needle4k-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead: ok, 1 rows, 39s, peak 7.37 GB
+10:06:07 START task-code800-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead: free 12.0 GB, cap 11.0 GB, expected peak 7.5 GB
+10:06:57 END task-code800-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead: ok, 1 rows, 49s, peak 7.08 GB
+10:06:57 START task-needle4k-Qwen3.5-9B-OptiQ-4bit-N2-all: free 12.0 GB, cap 11.0 GB, expected peak 7.7 GB
+10:07:34 END task-needle4k-Qwen3.5-9B-OptiQ-4bit-N2-all: ok, 1 rows, 37s, peak 6.8 GB
+10:07:34 START task-code800-Qwen3.5-9B-OptiQ-4bit-N2-all: free 11.9 GB, cap 10.9 GB, expected peak 6.9 GB
+10:08:20 END task-code800-Qwen3.5-9B-OptiQ-4bit-N2-all: ok, 1 rows, 46s, peak 6.32 GB
+10:08:20 PHASE speed done: ok x16
+10:08:37 PHASE tie: 1 jobs
+10:08:37 START tie-check: free 11.3 GB, cap 10.3 GB, expected peak 8.1 GB
+10:08:54 END tie-check: ok, 3 rows, 16s, peak 7.67 GB
+10:08:54 PHASE tie done: ok x1
+10:08:56 PHASE kl_long: 4 jobs
+10:08:56 START kl-ref-source-long: free 11.7 GB, cap 10.7 GB, expected peak 9.2 GB
+10:10:21 END kl-ref-source-long: ok, 0 rows, 85s, peak 9.05 GB
+10:10:21 START kl-control-source-long: free 12.2 GB, cap 11.2 GB, expected peak 9.2 GB
+10:11:08 END kl-control-source-long: ok, 3 rows, 47s, peak 9.02 GB
+10:11:08 START kl-n2-gdnhead-long: free 12.3 GB, cap 11.3 GB, expected peak 8.3 GB
+10:11:52 END kl-n2-gdnhead-long: ok, 3 rows, 44s, peak 8.33 GB
+10:11:52 START kl-n2-all-long: free 11.8 GB, cap 10.8 GB, expected peak 7.7 GB
+10:12:34 END kl-n2-all-long: ok, 3 rows, 41s, peak 7.58 GB
+10:12:34 PHASE kl_long done: ok x4
+10:12:36 PHASE dflash_long: 4 jobs
+10:12:36 START dflash-long-plain-0: free 11.6 GB, cap 10.6 GB, expected peak 10.5 GB
+10:13:18 END dflash-long-plain-0: STOPPED BY GUARD, 1 rows, 42s, peak 8.38 GB | [MemoryGuard] swap grew 79 MB; stopping the run
+10:13:18 START dflash-long-idset-1: free 12.4 GB, cap 11.4 GB, expected peak 10.5 GB
+10:13:44 PHASE cache: 4 jobs
+10:13:44 START cache-0.25-0: free 11.1 GB, cap 10.1 GB, expected peak 8.6 GB
+10:14:33 END cache-0.25-0: ok, 2 rows, 49s, peak 7.67 GB
+10:14:33 START cache-1-1: free 12.1 GB, cap 11.1 GB, expected peak 8.6 GB
+10:15:24 END cache-1-1: ok, 2 rows, 51s, peak 8.12 GB
+10:15:24 START cache-1-2: free 12.3 GB, cap 11.3 GB, expected peak 8.6 GB
+10:16:14 END cache-1-2: ok, 2 rows, 50s, peak 8.06 GB
+10:16:14 START cache-0.25-3: free 12.3 GB, cap 11.3 GB, expected peak 8.6 GB
+10:17:04 END cache-0.25-3: ok, 2 rows, 49s, peak 7.59 GB
+10:17:04 PHASE cache done: ok x4
+10:17:06 PHASE sample: 12 jobs
+10:17:06 START sample-AR-Qwen3.5-9B-OptiQ-4bit-s0: free 11.9 GB, cap 10.9 GB, expected peak 8.1 GB
+10:18:14 END sample-AR-Qwen3.5-9B-OptiQ-4bit-s0: ok, 3 rows, 68s, peak 8.1 GB
+10:18:14 START sample-A-Qwen3.5-9B-OptiQ-4bit-s0: free 12.4 GB, cap 11.4 GB, expected peak 8.1 GB
+10:19:03 END sample-A-Qwen3.5-9B-OptiQ-4bit-s0: ok, 3 rows, 49s, peak 8.16 GB
+10:19:03 START sample-AR-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-s0: free 12.3 GB, cap 11.2 GB, expected peak 7.2 GB
+10:20:07 END sample-AR-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-s0: ok, 3 rows, 63s, peak 7.18 GB
+10:20:07 START sample-A-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-s0: free 12.0 GB, cap 11.0 GB, expected peak 7.2 GB
+10:20:49 END sample-A-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-s0: ok, 3 rows, 43s, peak 6.89 GB
+10:20:49 START sample-AR-Qwen3.5-9B-OptiQ-4bit-s1: free 12.0 GB, cap 11.0 GB, expected peak 8.1 GB
+10:21:59 END sample-AR-Qwen3.5-9B-OptiQ-4bit-s1: ok, 3 rows, 69s, peak 7.7 GB
+10:21:59 START sample-A-Qwen3.5-9B-OptiQ-4bit-s1: free 12.3 GB, cap 11.3 GB, expected peak 8.1 GB
+10:22:44 END sample-A-Qwen3.5-9B-OptiQ-4bit-s1: ok, 3 rows, 45s, peak 8.09 GB
+10:22:44 START sample-AR-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-s1: free 12.1 GB, cap 11.1 GB, expected peak 7.2 GB
+10:23:45 END sample-AR-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-s1: ok, 3 rows, 61s, peak 7.07 GB
+10:23:45 START sample-A-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-s1: free 11.8 GB, cap 10.8 GB, expected peak 7.2 GB
+10:24:30 END sample-A-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-s1: ok, 3 rows, 45s, peak 7.11 GB
+10:24:30 START sample-AR-Qwen3.5-9B-OptiQ-4bit-s2: free 11.9 GB, cap 10.9 GB, expected peak 8.1 GB
+10:25:43 END sample-AR-Qwen3.5-9B-OptiQ-4bit-s2: ok, 3 rows, 72s, peak 7.96 GB
+10:25:43 START sample-A-Qwen3.5-9B-OptiQ-4bit-s2: free 12.1 GB, cap 11.1 GB, expected peak 8.1 GB
+10:26:32 END sample-A-Qwen3.5-9B-OptiQ-4bit-s2: ok, 3 rows, 49s, peak 7.72 GB
+10:26:32 START sample-AR-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-s2: free 12.0 GB, cap 11.0 GB, expected peak 7.2 GB
+10:27:35 END sample-AR-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-s2: ok, 3 rows, 63s, peak 6.83 GB
+10:27:35 START sample-A-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-s2: free 12.0 GB, cap 11.0 GB, expected peak 7.2 GB
+10:28:21 END sample-A-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-s2: ok, 3 rows, 46s, peak 7.33 GB
+10:28:21 PHASE sample done: ok x12
+10:28:33 PHASE task16k: 2 jobs
+10:28:33 START task-needle16k-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead: free 11.8 GB, cap 10.8 GB, expected peak 8.1 GB
+10:29:30 END task-needle16k-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead: ok, 1 rows, 57s, peak 7.9 GB
+10:29:30 START task-needle16k-Qwen3.5-9B-OptiQ-4bit-N2-all: free 11.8 GB, cap 10.8 GB, expected peak 7.5 GB
+10:30:32 END task-needle16k-Qwen3.5-9B-OptiQ-4bit-N2-all: ok, 1 rows, 62s, peak 7.19 GB
+10:30:32 PHASE task16k done: ok x2
+04:02:35 PHASE t1: 3 jobs
+04:02:35 START t1-needle-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead: free 13.2 GB, cap 12.2 GB, expected peak 8.4 GB, swap 1.15 GB (may grow 1.85)
+04:10:59 END t1-needle-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead: ok, 12 rows, 504s, peak 8.53 GB, swap growth 0.0 GB
+04:10:59 START t1-needle-Qwen3.5-9B-OptiQ-4bit-N2-all: free 13.6 GB, cap 12.6 GB, expected peak 7.8 GB, swap 1.14 GB (may grow 1.86)
+04:19:04 END t1-needle-Qwen3.5-9B-OptiQ-4bit-N2-all: ok, 12 rows, 485s, peak 8.2 GB, swap growth 0.0 GB
+04:19:04 START t1-needle-Qwen3.5-9B-OptiQ-4bit: free 13.6 GB, cap 12.6 GB, expected peak 9.3 GB, swap 1.14 GB (may grow 1.86)
+04:28:18 END t1-needle-Qwen3.5-9B-OptiQ-4bit: ok, 12 rows, 554s, peak 9.4 GB, swap growth 0.0 GB
+04:28:18 PHASE t1 done: ok x3
+04:28:58 PHASE dflash_long: 4 jobs
+04:28:58 START dflash-long-plain-0: free 14.2 GB, cap 13.2 GB, expected peak 10.5 GB, swap 1.14 GB (may grow 1.86)
+04:30:08 END dflash-long-plain-0: ok, 2 rows, 71s, peak 10.0 GB, swap growth 0.0 GB
+04:30:08 START dflash-long-idset-1: free 14.7 GB, cap 13.7 GB, expected peak 10.5 GB, swap 1.14 GB (may grow 1.86)
+04:31:18 END dflash-long-idset-1: ok, 2 rows, 70s, peak 10.0 GB, swap growth 0.0 GB
+04:31:18 START dflash-long-idset-2: free 14.8 GB, cap 13.8 GB, expected peak 10.5 GB, swap 1.14 GB (may grow 1.86)
+04:32:30 END dflash-long-idset-2: ok, 2 rows, 72s, peak 10.0 GB, swap growth 0.0 GB
+04:32:30 START dflash-long-plain-3: free 14.6 GB, cap 13.6 GB, expected peak 10.5 GB, swap 1.14 GB (may grow 1.86)
+04:33:42 END dflash-long-plain-3: ok, 2 rows, 72s, peak 10.0 GB, swap growth 0.0 GB
+04:33:42 PHASE dflash_long done: ok x4
+04:34:20 PHASE tie_long: 1 jobs
+04:34:20 START tie-check-long: free 14.4 GB, cap 13.4 GB, expected peak 9.4 GB, swap 1.14 GB (may grow 1.86)
+04:35:01 END tie-check-long: ok, 4 rows, 40s, peak 8.7 GB, swap growth ? GB
+04:35:01 PHASE tie_long done: ok x1
+04:35:36 PHASE t4: 8 jobs
+04:35:36 START t4-D2-0: free 14.3 GB, cap 13.3 GB, expected peak 10.0 GB, swap 1.14 GB (may grow 1.86)
+04:38:43 END t4-D2-0: ok, 6 rows, 187s, peak 10.0 GB, swap growth 0.0 GB
+04:38:43 START t4-A-D2-vs-A-0: free 14.5 GB, cap 13.5 GB, expected peak 9.5 GB, swap 1.14 GB (may grow 1.86)
+04:41:48 END t4-A-D2-vs-A-0: ok, 6 rows, 184s, peak 8.84 GB, swap growth 0.0 GB
+04:41:48 START t4-A-D2-vs-A-1: free 14.1 GB, cap 13.2 GB, expected peak 9.5 GB, swap 1.14 GB (may grow 1.86)
+04:44:50 END t4-A-D2-vs-A-1: ok, 6 rows, 182s, peak 8.74 GB, swap growth 0.0 GB
+04:44:50 START t4-D2-1: free 14.3 GB, cap 13.3 GB, expected peak 10.0 GB, swap 1.14 GB (may grow 1.86)
+04:47:56 END t4-D2-1: ok, 6 rows, 186s, peak 10.0 GB, swap growth 0.0 GB
+04:47:57 START t4-A-A-vs-Aq4-0: free 14.6 GB, cap 13.6 GB, expected peak 10.0 GB, swap 1.14 GB (may grow 1.86)
+04:52:35 END t4-A-A-vs-Aq4-0: ok, 6 rows, 278s, peak 8.99 GB, swap growth 0.0 GB
+04:52:35 START t4-Aq4-A-vs-Aq4-1: free 14.5 GB, cap 13.5 GB, expected peak 10.0 GB, swap 1.14 GB (may grow 1.86)
+04:57:11 END t4-Aq4-A-vs-Aq4-1: ok, 6 rows, 276s, peak 9.38 GB, swap growth 0.0 GB
+04:57:11 START t4-Aq4-A-vs-Aq4-2: free 14.5 GB, cap 13.5 GB, expected peak 10.0 GB, swap 1.14 GB (may grow 1.86)
+05:01:47 END t4-Aq4-A-vs-Aq4-2: ok, 6 rows, 276s, peak 9.38 GB, swap growth 0.0 GB
+05:01:47 START t4-A-A-vs-Aq4-3: free 14.5 GB, cap 13.5 GB, expected peak 10.0 GB, swap 1.14 GB (may grow 1.86)
+05:06:27 END t4-A-A-vs-Aq4-3: ok, 6 rows, 279s, peak 9.37 GB, swap growth 0.0 GB
+05:06:27 PHASE t4 done: ok x8
+10:06:49 PHASE t7: 10 jobs
+10:06:49 START t7-kl: free 11.0 GB, cap 10.0 GB, expected peak 6.6 GB, swap 1.13 GB (may grow 1.87)
+10:07:12 END t7-kl: ok, 4 rows, 23s, peak 6.8 GB, swap growth ? GB
+10:07:12 START t7-kl-long: free 12.3 GB, cap 11.3 GB, expected peak 7.7 GB, swap 1.13 GB (may grow 1.87)
+10:07:56 END t7-kl-long: ok, 3 rows, 45s, peak 7.67 GB, swap growth ? GB
+10:07:56 START t7-needle4k: free 12.3 GB, cap 11.3 GB, expected peak 7.7 GB, swap 1.13 GB (may grow 1.87)
+10:08:31 END t7-needle4k: ok, 1 rows, 35s, peak 6.9 GB, swap growth 0.0 GB
+10:08:31 START t7-needle16k: free 12.4 GB, cap 11.4 GB, expected peak 7.5 GB, swap 1.13 GB (may grow 1.87)
+10:09:26 END t7-needle16k: ok, 1 rows, 55s, peak 7.44 GB, swap growth 0.0 GB
+10:09:26 START t7-code800: free 12.6 GB, cap 11.6 GB, expected peak 6.9 GB, swap 1.13 GB (may grow 1.87)
+10:10:10 END t7-code800: ok, 1 rows, 44s, peak 6.48 GB, swap growth 0.0 GB
+10:10:10 START t7-needle-var: free 12.2 GB, cap 11.2 GB, expected peak 7.9 GB, swap 1.13 GB (may grow 1.87)
+10:18:24 END t7-needle-var: ok, 12 rows, 494s, peak 8.11 GB, swap growth 0.0 GB
+10:18:24 START t7-speed-AR-Qwen3.5-9B-OptiQ-4bit-N2-all-gptq-0: free 12.6 GB, cap 11.7 GB, expected peak 6.6 GB, swap 1.13 GB (may grow 1.87)
+10:19:22 END t7-speed-AR-Qwen3.5-9B-OptiQ-4bit-N2-all-gptq-0: ok, 3 rows, 58s, peak 6.25 GB, swap growth 0.0 GB
+10:19:22 START t7-speed-AR-Qwen3.5-9B-OptiQ-4bit-N2-all-1: free 12.2 GB, cap 11.2 GB, expected peak 6.6 GB, swap 1.13 GB (may grow 1.87)
+10:20:19 END t7-speed-AR-Qwen3.5-9B-OptiQ-4bit-N2-all-1: ok, 3 rows, 58s, peak 6.57 GB, swap growth 0.0 GB
+10:20:19 START t7-speed-A-Qwen3.5-9B-OptiQ-4bit-N2-all-2: free 12.3 GB, cap 11.3 GB, expected peak 6.6 GB, swap 1.13 GB (may grow 1.87)
+10:20:59 END t7-speed-A-Qwen3.5-9B-OptiQ-4bit-N2-all-2: ok, 3 rows, 40s, peak 6.24 GB, swap growth 0.0 GB
+10:20:59 START t7-speed-A-Qwen3.5-9B-OptiQ-4bit-N2-all-gptq-3: free 12.3 GB, cap 11.3 GB, expected peak 6.6 GB, swap 1.13 GB (may grow 1.87)
+10:21:39 END t7-speed-A-Qwen3.5-9B-OptiQ-4bit-N2-all-gptq-3: ok, 3 rows, 39s, peak 6.76 GB, swap growth 0.0 GB
+10:21:39 PHASE t7 done: ok x10
+10:45:32 PHASE t2: 18 jobs
+10:45:32 START t2-kl: free 9.2 GB, cap 8.2 GB, expected peak 6.9 GB, swap 1.12 GB (may grow 1.88)
+10:45:58 END t2-kl: ok, 4 rows, 25s, peak 6.93 GB, swap growth ? GB
+10:45:58 START t2-kl-long: free 11.9 GB, cap 10.9 GB, expected peak 8.0 GB, swap 1.12 GB (may grow 1.88)
+10:46:47 END t2-kl-long: ok, 3 rows, 49s, peak 7.78 GB, swap growth ? GB
+10:46:47 START t2-needle4k: free 12.0 GB, cap 11.1 GB, expected peak 8.0 GB, swap 1.12 GB (may grow 1.88)
+10:47:22 END t2-needle4k: ok, 1 rows, 35s, peak 6.85 GB, swap growth 0.0 GB
+10:47:22 START t2-needle16k: free 11.9 GB, cap 10.9 GB, expected peak 7.8 GB, swap 1.12 GB (may grow 1.88)
+10:48:16 END t2-needle16k: ok, 1 rows, 54s, peak 7.47 GB, swap growth 0.0 GB
+10:48:16 START t2-code800: free 12.0 GB, cap 11.0 GB, expected peak 7.2 GB, swap 1.12 GB (may grow 1.88)
+10:49:01 END t2-code800: ok, 1 rows, 45s, peak 6.8 GB, swap growth 0.0 GB
+10:49:01 START t2-needle-var: free 11.6 GB, cap 10.6 GB, expected peak 8.2 GB, swap 1.12 GB (may grow 1.88)
+10:57:41 END t2-needle-var: ok, 12 rows, 520s, peak 8.07 GB, swap growth 0.0 GB
+10:57:41 START t2-speed-AR-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-mlp-gptq-0: free 12.0 GB, cap 11.0 GB, expected peak 6.9 GB, swap 1.12 GB (may grow 1.88)
+10:58:40 END t2-speed-AR-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-mlp-gptq-0: ok, 3 rows, 60s, peak 6.39 GB, swap growth 0.0 GB
+10:58:40 START t2-speed-A-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-mlp-gptq-1: free 11.8 GB, cap 10.8 GB, expected peak 6.9 GB, swap 1.12 GB (may grow 1.88)
+10:59:23 END t2-speed-A-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-mlp-gptq-1: ok, 3 rows, 43s, peak 6.73 GB, swap growth 0.0 GB
+10:59:23 START t2-speed-AR-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-2: free 11.7 GB, cap 10.7 GB, expected peak 7.2 GB, swap 1.12 GB (may grow 1.88)
+11:00:28 END t2-speed-AR-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-2: ok, 3 rows, 65s, peak 7.09 GB, swap growth 0.0 GB
+11:00:28 START t2-speed-A-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-3: free 11.9 GB, cap 10.9 GB, expected peak 7.2 GB, swap 1.12 GB (may grow 1.88)
+11:01:12 END t2-speed-A-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-3: ok, 3 rows, 44s, peak 7.24 GB, swap growth 0.0 GB
+11:01:12 START t2-speed-AR-Qwen3.5-9B-OptiQ-4bit-4: free 11.8 GB, cap 10.8 GB, expected peak 8.1 GB, swap 1.12 GB (may grow 1.88)
+11:02:23 END t2-speed-AR-Qwen3.5-9B-OptiQ-4bit-4: ok, 3 rows, 71s, peak 7.7 GB, swap growth 0.0 GB
+11:02:23 START t2-speed-A-Qwen3.5-9B-OptiQ-4bit-5: free 12.2 GB, cap 11.2 GB, expected peak 8.1 GB, swap 1.12 GB (may grow 1.88)
+11:03:11 END t2-speed-A-Qwen3.5-9B-OptiQ-4bit-5: ok, 3 rows, 48s, peak 8.25 GB, swap growth 0.0 GB
+11:03:11 START t2-speed-A-Qwen3.5-9B-OptiQ-4bit-6: free 12.2 GB, cap 11.2 GB, expected peak 8.1 GB, swap 1.12 GB (may grow 1.88)
+11:03:59 END t2-speed-A-Qwen3.5-9B-OptiQ-4bit-6: ok, 3 rows, 48s, peak 8.0 GB, swap growth 0.0 GB
+11:03:59 START t2-speed-AR-Qwen3.5-9B-OptiQ-4bit-7: free 12.1 GB, cap 11.1 GB, expected peak 8.1 GB, swap 1.12 GB (may grow 1.88)
+11:05:10 END t2-speed-AR-Qwen3.5-9B-OptiQ-4bit-7: ok, 3 rows, 71s, peak 8.1 GB, swap growth 0.0 GB
+11:05:10 START t2-speed-A-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-8: free 12.2 GB, cap 11.2 GB, expected peak 7.2 GB, swap 1.12 GB (may grow 1.88)
+11:05:54 END t2-speed-A-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-8: ok, 3 rows, 44s, peak 6.88 GB, swap growth 0.0 GB
+11:05:54 START t2-speed-AR-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-9: free 11.9 GB, cap 10.9 GB, expected peak 7.2 GB, swap 1.12 GB (may grow 1.88)
+11:06:57 END t2-speed-AR-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-9: ok, 3 rows, 64s, peak 7.07 GB, swap growth 0.0 GB
+11:06:57 START t2-speed-A-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-mlp-gptq-10: free 12.0 GB, cap 11.0 GB, expected peak 6.9 GB, swap 1.12 GB (may grow 1.88)
+11:07:40 END t2-speed-A-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-mlp-gptq-10: ok, 3 rows, 42s, peak 6.6 GB, swap growth 0.0 GB
+11:07:40 START t2-speed-AR-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-mlp-gptq-11: free 11.4 GB, cap 10.3 GB, expected peak 6.9 GB, swap 1.12 GB (may grow 1.88)
+11:08:40 END t2-speed-AR-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-mlp-gptq-11: ok, 3 rows, 60s, peak 6.89 GB, swap growth 0.0 GB
+11:08:40 PHASE t2 done: ok x18
+11:20:39 PHASE first: 5 jobs
+11:20:39 START first-Qwen3.5-9B-OptiQ-4bit: free 10.8 GB, cap 9.8 GB, expected peak 9.6 GB, swap 1.12 GB (may grow 1.88)
+11:22:06 END first-Qwen3.5-9B-OptiQ-4bit: ok, 3 rows, 87s, peak 9.36 GB, swap growth ? GB
+11:22:06 START first-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead: free 13.2 GB, cap 12.2 GB, expected peak 8.7 GB, swap 1.12 GB (may grow 1.88)
+11:23:18 END first-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead: ok, 3 rows, 72s, peak 8.42 GB, swap growth ? GB
+11:23:18 START first-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-mlp-gptq: free 13.1 GB, cap 12.1 GB, expected peak 8.4 GB, swap 1.12 GB (may grow 1.88)
+11:24:30 END first-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-mlp-gptq: ok, 3 rows, 71s, peak 8.15 GB, swap growth ? GB
+11:24:30 START first-Qwen3.5-9B-OptiQ-4bit-N2-all-gptq: free 13.1 GB, cap 12.1 GB, expected peak 8.1 GB, swap 1.12 GB (may grow 1.88)
+11:25:43 END first-Qwen3.5-9B-OptiQ-4bit-N2-all-gptq: ok, 3 rows, 73s, peak 7.82 GB, swap growth ? GB
+11:25:43 START first-Qwen3.5-9B-OptiQ-4bit-N2-all: free 13.0 GB, cap 12.0 GB, expected peak 8.1 GB, swap 1.12 GB (may grow 1.88)
+11:26:57 END first-Qwen3.5-9B-OptiQ-4bit-N2-all: ok, 3 rows, 75s, peak 7.91 GB, swap growth ? GB
+11:26:57 PHASE first done: ok x5
+11:27:47 PHASE branch: 5 jobs
+11:27:47 START branch-Qwen3.5-9B-OptiQ-4bit: free 12.8 GB, cap 11.8 GB, expected peak 9.6 GB, swap 1.12 GB (may grow 1.88)
+11:28:27 END branch-Qwen3.5-9B-OptiQ-4bit: ok, 1 rows, 40s, peak 9.09 GB, swap growth ? GB
+11:28:27 START branch-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead: free 13.2 GB, cap 12.2 GB, expected peak 8.7 GB, swap 1.12 GB (may grow 1.88)
+11:29:04 END branch-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead: ok, 1 rows, 37s, peak 8.02 GB, swap growth ? GB
+11:29:04 START branch-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-mlp-gptq: free 13.1 GB, cap 12.1 GB, expected peak 8.4 GB, swap 1.12 GB (may grow 1.88)
+11:29:40 END branch-Qwen3.5-9B-OptiQ-4bit-N2-gdnhead-mlp-gptq: ok, 1 rows, 36s, peak 7.69 GB, swap growth ? GB
+11:29:40 START branch-Qwen3.5-9B-OptiQ-4bit-N2-all-gptq: free 13.0 GB, cap 12.0 GB, expected peak 8.1 GB, swap 1.12 GB (may grow 1.88)
+11:30:15 END branch-Qwen3.5-9B-OptiQ-4bit-N2-all-gptq: ok, 1 rows, 35s, peak 7.81 GB, swap growth ? GB
+11:30:15 START branch-Qwen3.5-9B-OptiQ-4bit-N2-all: free 12.9 GB, cap 11.9 GB, expected peak 8.1 GB, swap 1.12 GB (may grow 1.88)
+11:30:52 END branch-Qwen3.5-9B-OptiQ-4bit-N2-all: ok, 1 rows, 37s, peak 7.74 GB, swap growth ? GB
+11:30:52 PHASE branch done: ok x5

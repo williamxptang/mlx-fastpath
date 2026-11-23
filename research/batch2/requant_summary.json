@@ -1,0 +1,86 @@
+{
+ "bytes_per_token_gb": {
+  "Qwen3.5-9B-OptiQ-4bit": {
+   "gb": 6.02,
+   "floor_tok_s_at_134": 22.3,
+   "vs_source": 1.0
+  },
+  "Qwen3.5-9B-OptiQ-4bit-N2-gdnhead": {
+   "gb": 5.089,
+   "floor_tok_s_at_134": 26.4,
+   "vs_source": 1.183
+  },
+  "Qwen3.5-9B-OptiQ-4bit-N2-all": {
+   "gb": 4.466,
+   "floor_tok_s_at_134": 30.0,
+   "vs_source": 1.348
+  }
+ },
+ "rel_error_by_type": {
+  "lm_head": {
+   "n": 1,
+   "median": 0.0929,
+   "max": 0.0929
+  },
+  "model.linear_attn.in_proj_a": {
+   "n": 24,
+   "median": 0.0996,
+   "max": 0.1132
+  },
+  "model.linear_attn.in_proj_b": {
+   "n": 24,
+   "median": 0.1082,
+   "max": 0.1148
+  },
+  "model.linear_attn.in_proj_qkv": {
+   "n": 9,
+   "median": 0.0928,
+   "max": 0.0938
+  },
+  "model.linear_attn.in_proj_z": {
+   "n": 8,
+   "median": 0.0926,
+   "max": 0.0932
+  },
+  "model.linear_attn.out_proj": {
+   "n": 24,
+   "median": 0.093,
+   "max": 0.0962
+  },
+  "model.mlp.down_proj": {
+   "n": 5,
+   "median": 0.0925,
+   "max": 0.0974
+  },
+  "model.mlp.gate_proj": {
+   "n": 2,
+   "median": 0.0931,
+   "max": 0.0944
+  },
+  "model.mlp.up_proj": {
+   "n": 12,
+   "median": 0.0922,
+   "max": 0.0933
+  },
+  "model.self_attn.k_proj": {
+   "n": 5,
+   "median": 0.0973,
+   "max": 0.1143
+  },
+  "model.self_attn.o_proj": {
+   "n": 8,
+   "median": 0.0938,
+   "max": 0.1015
+  },
+  "model.self_attn.q_proj": {
+   "n": 3,
+   "median": 0.0929,
+   "max": 0.0957
+  },
+  "model.self_attn.v_proj": {
+   "n": 8,
+   "median": 0.0971,
+   "max": 0.1041
+  }
+ }
+}

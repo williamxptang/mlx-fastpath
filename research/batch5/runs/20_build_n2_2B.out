@@ -1,0 +1,20 @@
+model.safetensors written (3s)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "<repo>/mlx_fastpath/cli.py", line 67, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "<repo>/mlx_fastpath/cli.py", line 47, in main
+    dst = n2.build(a.src)
+  File "<repo>/mlx_fastpath/n2.py", line 183, in build
+    convert_shard(src / shard, tmp / shard, modules)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>/mlx_fastpath/n2.py", line 119, in convert_shard
+    h, start, meta = read_header(src_path)
+                     ~~~~~~~~~~~^^^^^^^^^^
+  File "<repo>/mlx_fastpath/n2.py", line 41, in read_header
+    with open(path, "rb") as f:
+         ~~~~^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '~/models/Qwen3.5-2B-OptiQ-4bit/optiq_vision.safetensors'
+exit=1

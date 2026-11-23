@@ -1,0 +1,106 @@
+FFF                                                                      [100%]
+=================================== FAILURES ===================================
+_ test_a_listed_file_that_is_missing_and_holds_nothing_to_convert_is_left_out __
+
+src = PosixPath('<pytest-tmp>/pytest-1405/test_a_listed_file_that_is_mis0/Model-OptiQ-4bit')
+
+    def test_a_listed_file_that_is_missing_and_holds_nothing_to_convert_is_left_out(src):
+        _list_a_missing_file(src, ["vision_tower.blocks.0.attn.qkv.weight", "vision_tower.blocks.0.attn.qkv.bias"])
+>       dst = n2.build(src)
+              ^^^^^^^^^^^^^
+
+tests/test_n2.py:103: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+mlx_fastpath/n2.py:183: in build
+    convert_shard(src / shard, tmp / shard, modules)
+mlx_fastpath/n2.py:119: in convert_shard
+    h, start, meta = read_header(src_path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('<pytest-tmp>/pytest-1405/test_a_listed_file_that_is_mis0/Model-OptiQ-4bit/optiq_vision.safetensors')
+
+    def read_header(path):
+>       with open(path, "rb") as f:
+             ^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '<pytest-tmp>/pytest-1405/test_a_listed_file_that_is_mis0/Model-OptiQ-4bit/optiq_vision.safetensors'
+
+mlx_fastpath/n2.py:41: FileNotFoundError
+----------------------------- Captured stdout call -----------------------------
+model-00001-of-00002.safetensors written (0s)
+model-00002-of-00002.safetensors written (0s)
+______ test_a_missing_file_that_holds_a_layer_to_convert_stops_the_build _______
+
+src = PosixPath('<pytest-tmp>/pytest-1405/test_a_missing_file_that_holds0/Model-OptiQ-4bit')
+
+    def test_a_missing_file_that_holds_a_layer_to_convert_stops_the_build(src):
+        m = "language_model.lm_head"
+        p = src / "model.safetensors.index.json"
+        idx = json.load(open(p))
+        for x in ("weight", "scales", "biases"):
+            idx["weight_map"][f"{m}.{x}"] = "missing-shard.safetensors"
+        json.dump(idx, open(p, "w"))
+        with pytest.raises(SystemExit, match="missing-shard.safetensors"):
+>           n2.build(src)
+
+tests/test_n2.py:118: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+mlx_fastpath/n2.py:183: in build
+    convert_shard(src / shard, tmp / shard, modules)
+mlx_fastpath/n2.py:119: in convert_shard
+    h, start, meta = read_header(src_path)
+                     ^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('<pytest-tmp>/pytest-1405/test_a_missing_file_that_holds0/Model-OptiQ-4bit/missing-shard.safetensors')
+
+    def read_header(path):
+>       with open(path, "rb") as f:
+             ^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '<pytest-tmp>/pytest-1405/test_a_missing_file_that_holds0/Model-OptiQ-4bit/missing-shard.safetensors'
+
+mlx_fastpath/n2.py:41: FileNotFoundError
+___________________ test_check_reports_a_file_the_copy_lost ____________________
+
+src = PosixPath('<pytest-tmp>/pytest-1405/test_check_reports_a_file_the_0/Model-OptiQ-4bit')
+
+    def test_check_reports_a_file_the_copy_lost(src):
+        dst = n2.build(src)
+        shard = sorted({s for s in json.load(open(dst / "model.safetensors.index.json"))["weight_map"].values()})[0]
+        (dst / shard).unlink()
+>       assert any(shard in p and "missing" in p for p in n2.check(src, dst))
+                                                          ^^^^^^^^^^^^^^^^^^
+
+tests/test_n2.py:126: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+mlx_fastpath/n2.py:258: in check
+    hd, sd, _ = read_header(dst / shard)
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+path = PosixPath('<pytest-tmp>/pytest-1405/test_check_reports_a_file_the_0/Model-OptiQ-4bit-N2-gdnhead/model-00001-of-00002.safetensors')
+
+    def read_header(path):
+>       with open(path, "rb") as f:
+             ^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: '<pytest-tmp>/pytest-1405/test_check_reports_a_file_the_0/Model-OptiQ-4bit-N2-gdnhead/model-00001-of-00002.safetensors'
+
+mlx_fastpath/n2.py:41: FileNotFoundError
+----------------------------- Captured stdout call -----------------------------
+model-00001-of-00002.safetensors written (0s)
+model-00002-of-00002.safetensors written (0s)
+{"converted": 2, "dst": "<pytest-tmp>/pytest-1405/test_check_reports_a_file_the_0/Model-OptiQ-4bit-N2-gdnhead", "seconds": 0}
+=============================== warnings summary ===============================
+<frozen importlib._bootstrap>:488
+  <frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+
+<frozen importlib._bootstrap>:488
+  <frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_n2.py::test_a_listed_file_that_is_missing_and_holds_nothing_to_convert_is_left_out
+FAILED tests/test_n2.py::test_a_missing_file_that_holds_a_layer_to_convert_stops_the_build
+FAILED tests/test_n2.py::test_check_reports_a_file_the_copy_lost - FileNotFou...
+3 failed, 18 deselected, 2 warnings in 10.12s
+<sys>:0: DeprecationWarning: builtin type swigvarlink has no __module__ attribute

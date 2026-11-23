@@ -1,0 +1,7 @@
+{"prompt": "kl", "label": "int4", "kl_mean": 0.17896, "kl_p99": 0.7784, "top1": 0.7744, "model": "q08", "weights": "int4", "job": "kl-q08-int4", "cap_gb": 13.13}
+{"prompt": "kl", "label": "optiq", "kl_mean": 0.05861, "kl_p99": 0.2366, "top1": 0.8672, "model": "q08", "weights": "optiq", "job": "kl-q08-optiq", "cap_gb": 13.17}
+{"prompt": "kl", "label": "optiq-n2", "kl_mean": 0.11549, "kl_p99": 0.5561, "top1": 0.8145, "model": "q08", "weights": "optiq-n2", "job": "kl-q08-optiq-n2", "cap_gb": 13.12}
+{"prompt": "kl", "label": "int4", "kl_mean": 0.13917, "kl_p99": 0.558, "top1": 0.7803, "model": "q2b", "weights": "int4", "job": "kl-q2b-int4", "cap_gb": 13.01}
+{"prompt": "kl", "label": "optiq", "kl_mean": 0.04845, "kl_p99": 0.2217, "top1": 0.8809, "model": "q2b", "weights": "optiq", "job": "kl-q2b-optiq", "cap_gb": 13.05}
+{"prompt": "kl", "label": "int4", "kl_mean": 1.23463, "kl_p99": 9.1366, "top1": 0.6504, "model": "gemma", "weights": "int4", "job": "kl-gemma-int4", "cap_gb": 14.59}
+{"prompt": "kl", "label": "optiq", "kl_mean": 0.54317, "kl_p99": 5.6289, "top1": 0.7715, "model": "gemma", "weights": "optiq", "job": "kl-gemma-optiq", "cap_gb": 14.51}

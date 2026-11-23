@@ -1,0 +1,203 @@
+2452eec Merge small-models (v0.0.10) into integration: re-validation on mlx 0.32.4 / mlx-lm 0.32.2 / optiq 0.8.5, safe n-gram head pricing
+start 19:30:31
+........................................................................ [ 80%]
+.................                                                        [100%]
+=============================== warnings summary ===============================
+<frozen importlib._bootstrap>:488
+  <frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+
+<frozen importlib._bootstrap>:488
+  <frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+
+tests/test_n2.py::test_load_uses_the_switch
+  <repo>/tests/test_n2.py:157: UserWarning: optiq was imported before loading: expect a ~3.7 GB higher load peak (9B). Import mlx_fastpath and load first.
+    assert fp.load(src, memory_limit_gb=None, cache_limit_gb=None) == ("engine", str(dst))
+
+tests/test_n2.py::test_load_uses_the_switch
+  <repo>/tests/test_n2.py:158: UserWarning: optiq was imported before loading: expect a ~3.7 GB higher load peak (9B). Import mlx_fastpath and load first.
+    assert fp.load(src, memory_limit_gb=None, cache_limit_gb=None, n2=False) == ("engine", str(src))
+
+tests/test_n2.py::test_a_model_that_is_not_quantized_loads_as_given_without_a_warning
+  <venv>/lib/python3.13/site-packages/_pytest/unraisableexception.py:67: PytestUnraisableExceptionWarning: Exception ignored in: <_io.FileIO name='<pytest-tmp>/pytest-1404/test_a_model_that_is_not_quant0/Plain-bf16/config.json' mode='rb' closefd=True>
+  
+  Traceback (most recent call last):
+    File "<repo>/mlx_fastpath/n2.py", line 307, in resolve_model
+      if (path / "config.json").exists() and selected(json.load(open(path / "config.json"))):
+                                                      ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  ResourceWarning: unclosed file <_io.TextIOWrapper name='<pytest-tmp>/pytest-1404/test_a_model_that_is_not_quant0/Plain-bf16/config.json' mode='r' encoding='UTF-8'>
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnraisableExceptionWarning(msg))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+____ test_build_converts_only_the_gdn_layers_and_the_head_and_passes_check _____
+----------------------------- Captured stdout call -----------------------------
+model-00001-of-00002.safetensors written (0s)
+model-00002-of-00002.safetensors written (0s)
+{"converted": 2, "dst": "<pytest-tmp>/pytest-1404/test_build_converts_only_the_g0/Model-OptiQ-4bit-N2-gdnhead", "seconds": 0}
+_____ test_check_reports_a_changed_byte_in_a_layer_that_was_not_converted ______
+----------------------------- Captured stdout call -----------------------------
+model-00001-of-00002.safetensors written (0s)
+model-00002-of-00002.safetensors written (0s)
+{"converted": 2, "dst": "<pytest-tmp>/pytest-1404/test_check_reports_a_changed_b0/Model-OptiQ-4bit-N2-gdnhead", "seconds": 0}
+___________ test_check_reports_4bit_codes_that_are_not_the_rounding ____________
+----------------------------- Captured stdout call -----------------------------
+model-00001-of-00002.safetensors written (0s)
+model-00002-of-00002.safetensors written (0s)
+{"converted": 2, "dst": "<pytest-tmp>/pytest-1404/test_check_reports_4bit_codes_0/Model-OptiQ-4bit-N2-gdnhead", "seconds": 0}
+______________ test_the_switch_picks_the_n2_copy[None-None-True] _______________
+----------------------------- Captured stdout call -----------------------------
+model-00001-of-00002.safetensors written (0s)
+model-00002-of-00002.safetensors written (0s)
+{"converted": 2, "dst": "<pytest-tmp>/pytest-1404/test_the_switch_picks_the_n2_c0/Model-OptiQ-4bit-N2-gdnhead", "seconds": 0}
+_______________ test_the_switch_picks_the_n2_copy[0-None-False] ________________
+----------------------------- Captured stdout call -----------------------------
+model-00001-of-00002.safetensors written (0s)
+model-00002-of-00002.safetensors written (0s)
+{"converted": 2, "dst": "<pytest-tmp>/pytest-1404/test_the_switch_picks_the_n2_c1/Model-OptiQ-4bit-N2-gdnhead", "seconds": 0}
+_______________ test_the_switch_picks_the_n2_copy[1-False-False] _______________
+----------------------------- Captured stdout call -----------------------------
+model-00001-of-00002.safetensors written (0s)
+model-00002-of-00002.safetensors written (0s)
+{"converted": 2, "dst": "<pytest-tmp>/pytest-1404/test_the_switch_picks_the_n2_c2/Model-OptiQ-4bit-N2-gdnhead", "seconds": 0}
+________________ test_the_switch_picks_the_n2_copy[0-True-True] ________________
+----------------------------- Captured stdout call -----------------------------
+model-00001-of-00002.safetensors written (0s)
+model-00002-of-00002.safetensors written (0s)
+{"converted": 2, "dst": "<pytest-tmp>/pytest-1404/test_the_switch_picks_the_n2_c3/Model-OptiQ-4bit-N2-gdnhead", "seconds": 0}
+______ test_the_usual_spellings_of_off_in_the_environment_turn_it_off[0] _______
+----------------------------- Captured stdout call -----------------------------
+model-00001-of-00002.safetensors written (0s)
+model-00002-of-00002.safetensors written (0s)
+{"converted": 2, "dst": "<pytest-tmp>/pytest-1404/test_the_usual_spellings_of_of0/Model-OptiQ-4bit-N2-gdnhead", "seconds": 0}
+____ test_the_usual_spellings_of_off_in_the_environment_turn_it_off[false] _____
+----------------------------- Captured stdout call -----------------------------
+model-00001-of-00002.safetensors written (0s)
+model-00002-of-00002.safetensors written (0s)
+{"converted": 2, "dst": "<pytest-tmp>/pytest-1404/test_the_usual_spellings_of_of1/Model-OptiQ-4bit-N2-gdnhead", "seconds": 0}
+_____ test_the_usual_spellings_of_off_in_the_environment_turn_it_off[OFF] ______
+----------------------------- Captured stdout call -----------------------------
+model-00001-of-00002.safetensors written (0s)
+model-00002-of-00002.safetensors written (0s)
+{"converted": 2, "dst": "<pytest-tmp>/pytest-1404/test_the_usual_spellings_of_of2/Model-OptiQ-4bit-N2-gdnhead", "seconds": 0}
+______ test_the_usual_spellings_of_off_in_the_environment_turn_it_off[no] ______
+----------------------------- Captured stdout call -----------------------------
+model-00001-of-00002.safetensors written (0s)
+model-00002-of-00002.safetensors written (0s)
+{"converted": 2, "dst": "<pytest-tmp>/pytest-1404/test_the_usual_spellings_of_of3/Model-OptiQ-4bit-N2-gdnhead", "seconds": 0}
+_____ test_the_usual_spellings_of_off_in_the_environment_turn_it_off[ 0 ] ______
+----------------------------- Captured stdout call -----------------------------
+model-00001-of-00002.safetensors written (0s)
+model-00002-of-00002.safetensors written (0s)
+{"converted": 2, "dst": "<pytest-tmp>/pytest-1404/test_the_usual_spellings_of_of4/Model-OptiQ-4bit-N2-gdnhead", "seconds": 0}
+_____ test_check_reports_a_source_without_quantization_instead_of_crashing _____
+----------------------------- Captured stdout call -----------------------------
+model-00001-of-00002.safetensors written (0s)
+model-00002-of-00002.safetensors written (0s)
+{"converted": 2, "dst": "<pytest-tmp>/pytest-1404/test_check_reports_a_source_wi0/Model-OptiQ-4bit-N2-gdnhead", "seconds": 0}
+__ test_an_n2_path_and_a_folder_that_is_not_a_finished_copy_are_used_as_given __
+----------------------------- Captured stdout call -----------------------------
+model-00001-of-00002.safetensors written (0s)
+model-00002-of-00002.safetensors written (0s)
+{"converted": 2, "dst": "<pytest-tmp>/pytest-1404/test_an_n2_path_and_a_folder_t0/Model-OptiQ-4bit-N2-gdnhead", "seconds": 0}
+__________________________ test_load_uses_the_switch ___________________________
+----------------------------- Captured stdout call -----------------------------
+model-00001-of-00002.safetensors written (0s)
+model-00002-of-00002.safetensors written (0s)
+{"converted": 2, "dst": "<pytest-tmp>/pytest-1404/test_load_uses_the_switch0/Model-OptiQ-4bit-N2-gdnhead", "seconds": 0}
+=========================== short test summary info ============================
+PASSED tests/test_apply_and_versions.py::test_version_file_is_consistent
+PASSED tests/test_apply_and_versions.py::test_package_reports_version_file_version
+PASSED tests/test_apply_and_versions.py::test_no_git_tag_is_above_the_version
+PASSED tests/test_apply_and_versions.py::test_apply_then_remove_restores_stock
+PASSED tests/test_apply_and_versions.py::test_untested_versions_run_stock
+PASSED tests/test_apply_and_versions.py::test_long_prompts_switch_to_4bit_kv[500-None]
+PASSED tests/test_apply_and_versions.py::test_long_prompts_switch_to_4bit_kv[16000-None]
+PASSED tests/test_apply_and_versions.py::test_long_prompts_switch_to_4bit_kv[32000-4]
+PASSED tests/test_ar.py::test_pipelined_decoding_gives_the_greedy_tokens[1024]
+PASSED tests/test_ar.py::test_pipelined_decoding_gives_the_greedy_tokens[4]
+PASSED tests/test_ar.py::test_stops_before_the_eos_token
+PASSED tests/test_ar.py::test_returns_exactly_max_tokens[1]
+PASSED tests/test_ar.py::test_returns_exactly_max_tokens[2]
+PASSED tests/test_ar.py::test_returns_exactly_max_tokens[7]
+PASSED tests/test_attention_dispatch.py::test_swapped_attention_equals_stock[24-4-900-1-bf16]
+PASSED tests/test_attention_dispatch.py::test_swapped_attention_equals_stock[24-4-900-1-q4]
+PASSED tests/test_attention_dispatch.py::test_swapped_attention_equals_stock[24-4-900-1-q8]
+PASSED tests/test_attention_dispatch.py::test_swapped_attention_equals_stock[24-4-900-3-bf16]
+PASSED tests/test_attention_dispatch.py::test_swapped_attention_equals_stock[24-4-900-3-q4]
+PASSED tests/test_attention_dispatch.py::test_swapped_attention_equals_stock[24-4-900-3-q8]
+PASSED tests/test_attention_dispatch.py::test_swapped_attention_equals_stock[24-4-900-4-bf16]
+PASSED tests/test_attention_dispatch.py::test_swapped_attention_equals_stock[24-4-900-4-q4]
+PASSED tests/test_attention_dispatch.py::test_swapped_attention_equals_stock[24-4-900-4-q8]
+PASSED tests/test_attention_dispatch.py::test_swapped_attention_equals_stock[16-4-700-8-bf16]
+PASSED tests/test_attention_dispatch.py::test_swapped_attention_equals_stock[16-4-700-8-q4]
+PASSED tests/test_attention_dispatch.py::test_swapped_attention_equals_stock[16-4-700-8-q8]
+PASSED tests/test_attention_dispatch.py::test_swapped_attention_equals_stock[16-4-700-16-bf16]
+PASSED tests/test_attention_dispatch.py::test_swapped_attention_equals_stock[16-4-700-16-q4]
+PASSED tests/test_attention_dispatch.py::test_swapped_attention_equals_stock[16-4-700-16-q8]
+PASSED tests/test_attention_dispatch.py::test_enable_and_disable_swap_the_model_module_name
+PASSED tests/test_attention_math.py::test_fold_matches_reference_on_bf16_cache[24-4-600-1]
+PASSED tests/test_attention_math.py::test_fold_matches_reference_on_bf16_cache[24-4-600-3]
+PASSED tests/test_attention_math.py::test_fold_matches_reference_on_bf16_cache[24-4-1000-8]
+PASSED tests/test_attention_math.py::test_fold_matches_reference_on_bf16_cache[16-4-777-4]
+PASSED tests/test_attention_math.py::test_fold_matches_reference_on_bf16_cache[16-4-512-16]
+PASSED tests/test_attention_math.py::test_fold_matches_reference_on_bf16_cache[16-8-300-2]
+PASSED tests/test_attention_math.py::test_quantized_paths_match_reference_on_dequantized_cache[24-4-600-1-4]
+PASSED tests/test_attention_math.py::test_quantized_paths_match_reference_on_dequantized_cache[24-4-600-1-8]
+PASSED tests/test_attention_math.py::test_quantized_paths_match_reference_on_dequantized_cache[24-4-600-3-4]
+PASSED tests/test_attention_math.py::test_quantized_paths_match_reference_on_dequantized_cache[24-4-600-3-8]
+PASSED tests/test_attention_math.py::test_quantized_paths_match_reference_on_dequantized_cache[24-4-1000-8-4]
+PASSED tests/test_attention_math.py::test_quantized_paths_match_reference_on_dequantized_cache[24-4-1000-8-8]
+PASSED tests/test_attention_math.py::test_quantized_paths_match_reference_on_dequantized_cache[16-4-777-4-4]
+PASSED tests/test_attention_math.py::test_quantized_paths_match_reference_on_dequantized_cache[16-4-777-4-8]
+PASSED tests/test_attention_math.py::test_quantized_paths_match_reference_on_dequantized_cache[16-4-512-16-4]
+PASSED tests/test_attention_math.py::test_quantized_paths_match_reference_on_dequantized_cache[16-4-512-16-8]
+PASSED tests/test_attention_math.py::test_quantized_paths_match_reference_on_dequantized_cache[16-8-300-2-4]
+PASSED tests/test_attention_math.py::test_quantized_paths_match_reference_on_dequantized_cache[16-8-300-2-8]
+PASSED tests/test_attention_math.py::test_fused_kernel_ignores_cache_rows_past_valid_length
+PASSED tests/test_cli.py::test_generate_hands_the_n2_switch_to_load[flags0-None]
+PASSED tests/test_cli.py::test_generate_hands_the_n2_switch_to_load[flags1-False]
+PASSED tests/test_cli.py::test_n2_command_builds_a_copy_that_passes_check
+PASSED tests/test_draft_cost.py::test_pricing_the_head_leaves_the_live_cache_as_it_was
+PASSED tests/test_draft_cost.py::test_pricing_the_head_drafts_from_the_models_hidden_width
+PASSED tests/test_draft_cost.py::test_switching_the_drafter_off_gives_optiq_its_own_pricing_back
+PASSED tests/test_draft_head.py::test_sub_head_logits_equal_full_head_on_kept_ids[linear]
+PASSED tests/test_draft_head.py::test_sub_head_logits_equal_full_head_on_kept_ids[quantized]
+PASSED tests/test_draft_head.py::test_expanded_logits_never_pick_an_id_outside_the_subset
+PASSED tests/test_draft_head.py::test_fast_mtp_drafter_drafts_the_best_id_within_the_subset
+PASSED tests/test_draft_head.py::test_id_set_is_the_first_k_ids_plus_the_prompt_ids
+PASSED tests/test_draft_head.py::test_id_set_head_scores_kept_ids_exactly_and_never_drafts_others
+PASSED tests/test_draft_head.py::test_generate_drafts_a_prompt_id_beyond_the_first_k_only_with_the_switch[False-False]
+PASSED tests/test_draft_head.py::test_generate_drafts_a_prompt_id_beyond_the_first_k_only_with_the_switch[True-True]
+PASSED tests/test_draft_head.py::test_the_prompt_ids_do_not_outlive_their_generate_call
+PASSED tests/test_draft_head.py::test_each_generate_call_drafts_from_its_own_prompt
+PASSED tests/test_draft_head.py::test_the_prompt_ids_are_cleared_when_generate_raises
+PASSED tests/test_draft_head.py::test_apply_passes_the_prompt_ids_switch_to_the_draft_head[False-False]
+PASSED tests/test_draft_head.py::test_apply_passes_the_prompt_ids_switch_to_the_draft_head[True-True]
+PASSED tests/test_n2.py::test_build_converts_only_the_gdn_layers_and_the_head_and_passes_check
+PASSED tests/test_n2.py::test_check_reports_a_changed_byte_in_a_layer_that_was_not_converted
+PASSED tests/test_n2.py::test_check_reports_4bit_codes_that_are_not_the_rounding
+PASSED tests/test_n2.py::test_build_refuses_an_existing_destination
+PASSED tests/test_n2.py::test_the_switch_picks_the_n2_copy[None-None-True]
+PASSED tests/test_n2.py::test_the_switch_picks_the_n2_copy[0-None-False]
+PASSED tests/test_n2.py::test_the_switch_picks_the_n2_copy[1-False-False]
+PASSED tests/test_n2.py::test_the_switch_picks_the_n2_copy[0-True-True]
+PASSED tests/test_n2.py::test_the_usual_spellings_of_off_in_the_environment_turn_it_off[0]
+PASSED tests/test_n2.py::test_the_usual_spellings_of_off_in_the_environment_turn_it_off[false]
+PASSED tests/test_n2.py::test_the_usual_spellings_of_off_in_the_environment_turn_it_off[OFF]
+PASSED tests/test_n2.py::test_the_usual_spellings_of_off_in_the_environment_turn_it_off[no]
+PASSED tests/test_n2.py::test_the_usual_spellings_of_off_in_the_environment_turn_it_off[ 0 ]
+PASSED tests/test_n2.py::test_check_reports_a_source_without_quantization_instead_of_crashing
+PASSED tests/test_n2.py::test_switched_on_without_a_copy_loads_the_original_and_says_how_to_build_one
+PASSED tests/test_n2.py::test_an_n2_path_and_a_folder_that_is_not_a_finished_copy_are_used_as_given
+PASSED tests/test_n2.py::test_load_uses_the_switch
+PASSED tests/test_n2.py::test_a_model_that_is_not_quantized_loads_as_given_without_a_warning
+PASSED tests/test_prefill.py::test_last_position_prefill_matches_full_logits[700-256]
+PASSED tests/test_prefill.py::test_last_position_prefill_matches_full_logits[700-1024]
+PASSED tests/test_prefill.py::test_last_position_prefill_matches_full_logits[513-512]
+89 passed, 8 deselected, 5 warnings in 14.01s
+<sys>:0: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+exit=0
+end 19:30:49

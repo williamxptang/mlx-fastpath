@@ -1,0 +1,63 @@
+
+[lossless] kv_bits=None: drift 0.000
+[lossless] kv_bits=None: drift 0.000
+[lossless] kv_bits=None: drift 0.000.
+[lossless] kv_bits=4: drift 1.758F
+=================================== FAILURES ===================================
+_________________ test_speedups_keep_greedy_mtp_output[q08-4] __________________
+
+mtp_engine = <optiq.runtime.engine.OptiqEngine object at 0x11f131e80>
+attention_calls = {'folded_qsdpa': 0, 'folded_sdpa': 0, 'fused_qkv_sdpa': 1530}
+kv_bits = 4
+
+    @pytest.mark.parametrize("kv_bits", [None, 4])
+    def test_speedups_keep_greedy_mtp_output(mtp_engine, attention_calls, kv_bits):
+        import mlx_fastpath as fp
+        ids = [_prompt_ids(mtp_engine, p) for p in PROMPTS]
+        fp.remove()
+        stock = [fp.generate(mtp_engine, x, max_tokens=MAX_TOKENS, kv_bits=kv_bits).text for x in ids]
+        try:
+            assert fp.apply(), "apply() ran stock: installed versions differ from apply.TESTED"
+            fast = [fp.generate(mtp_engine, x, max_tokens=MAX_TOKENS, kv_bits=kv_bits).text for x in ids]
+        finally:
+            fp.remove()
+        if kv_bits == 4:                                        # precondition: the fused 4-bit KV kernel was used
+            assert attention_calls["fused_qkv_sdpa"] > 0, attention_calls
+>       _assert_same_or_near_tie(mtp_engine, ids, stock, fast, kv_bits)
+
+tests/test_lossless_slow.py:147: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+engine = <optiq.runtime.engine.OptiqEngine object at 0x11f131e80>
+prompt_ids = [[248045, 846, 198, 814, 20139, 303, ...], [248045, 846, 198, 7734, 264, 12654, ...], [248045, 846, 198, 32, 5257, 10583, ...]]
+stock = ['The sky appears blue due to a phenomenon known as Rayleigh scattering, which occurs when sunlight passes through the...rrives at **13:15**.\n\n3.  **Perform the subtraction:**\n    We subtract the departure time from the arrival time:\n']
+fast = ['The sky appears blue due to a phenomenon known as Rayleigh scattering, which occurs when shorter wavelengths of ligh... the Time Difference\nTo find the total time elapsed, we subtract the departure time from the arrival time. We can do']
+kv_bits = 4
+
+    def _assert_same_or_near_tie(engine, prompt_ids, stock, fast, kv_bits=None):
+        tok, eos = engine.tokenizer, min(engine._eos_ids())    # a set of ids; any one stands for "ended"
+        agreed = 0
+        for ids, s, f in zip(prompt_ids, stock, fast):
+            a, b = tok.encode(s) + [eos], tok.encode(f) + [eos]   # a text ends on EOS: one more position to score
+            ref = _logits_along(engine, ids, a, kv_bits, speedups=False)
+            drift = mx.abs(ref - _logits_along(engine, ids, a, kv_bits, speedups=True)).max().item()
+            print(f"\n[lossless] kv_bits={kv_bits}: drift {drift:.3f}", end="")
+>           assert drift <= DRIFT_CEILING[kv_bits], f"speedups move logits by {drift:.3f} > {DRIFT_CEILING[kv_bits]}"
+E           AssertionError: speedups move logits by 1.758 > 0.5
+E           assert 1.7578125 <= 0.5
+
+tests/test_lossless_slow.py:106: AssertionError
+=============================== warnings summary ===============================
+tests/test_lossless_slow.py::test_speedups_keep_greedy_mtp_output[q08-None]
+  <frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+
+tests/test_lossless_slow.py::test_speedups_keep_greedy_mtp_output[q08-None]
+  <frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_lossless_slow.py::test_speedups_keep_greedy_mtp_output[q08-None]
+FAILED tests/test_lossless_slow.py::test_speedups_keep_greedy_mtp_output[q08-4]
+1 failed, 1 passed, 3 deselected, 2 warnings in 35.73s
+<sys>:0: DeprecationWarning: builtin type swigvarlink has no __module__ attribute

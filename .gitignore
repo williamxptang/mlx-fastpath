@@ -1,0 +1,22 @@
+__pycache__/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+# plans and backups stay out of git (all case variants)
+.plan/
+.PLAN/
+.Plan/
+.backup/
+.BACKUP/
+.BackUP/
+.Backup/
+.backups/
+.BACKUPS/
+research/kmic68/exp/e1_clips/
+
+# git worktrees (integration)
+.worktrees/
+
+# local notes
+.claude/

@@ -1,0 +1,10 @@
+start 21:26:41
+optiq_vision.safetensors: listed in the index but not on disk, holds nothing to convert: left out, as in the source
+model.safetensors written (3s)
+{"converted": 37, "dst": "~/models/Qwen3.5-2B-OptiQ-4bit-N2-gdnhead", "seconds": 3}
+{
+ "n2": "~/models/Qwen3.5-2B-OptiQ-4bit-N2-gdnhead",
+ "problems": []
+}
+exit=0
+end 21:27:22

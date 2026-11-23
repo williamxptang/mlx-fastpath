@@ -1,0 +1,3 @@
+{"prompt": "chat", "prompt_tokens": 32, "tokens": 300, "sync_tok_s": 17.64, "pipelined_tok_s": 19.66, "speedup": 1.114, "same_tokens": true, "peak_footprint_gb": 7.85, "swap_growth_gb": 0.0}
+{"prompt": "needle_4k", "prompt_tokens": 4095, "tokens": 300, "sync_tok_s": 17.34, "pipelined_tok_s": 19.19, "speedup": 1.107, "same_tokens": true, "codes": 3, "peak_footprint_gb": 9.14, "swap_growth_gb": 0.0}
+{"prompt": "needle_16k", "prompt_tokens": 16095, "tokens": 300, "sync_tok_s": 16.27, "pipelined_tok_s": 17.94, "speedup": 1.103, "same_tokens": true, "codes": 3, "peak_footprint_gb": 9.64, "swap_growth_gb": -0.008}

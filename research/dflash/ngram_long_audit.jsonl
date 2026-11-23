@@ -1,0 +1,6 @@
+{"method": "N+", "prompt": "needle_4k", "tokens_reencoded": 300, "agree": 0.9867, "nll": 0.3331, "codes": 3, "distinct4": 0.98, "longest_repeat": 5, "wall_vs_reported": 1.0, "peak_footprint_gb": 9.29, "swap_growth_gb": 0.0}
+{"method": "N+", "prompt": "needle_16k", "tokens_reencoded": 300, "agree": 0.9933, "nll": 0.3324, "codes": 3, "distinct4": 0.99, "longest_repeat": 5, "wall_vs_reported": 1.0, "peak_footprint_gb": 9.66, "swap_growth_gb": 0.0}
+{"method": "N+", "prompt": "needle_32k", "tokens_reencoded": 300, "agree": 0.9833, "nll": 0.3363, "codes": 3, "distinct4": 0.99, "longest_repeat": 5, "wall_vs_reported": 1.0, "peak_footprint_gb": 10.0, "swap_growth_gb": 0.0}
+{"method": "N+q4", "prompt": "needle_4k", "tokens_reencoded": 300, "agree": 0.9267, "nll": 0.362, "codes": 3, "distinct4": 0.987, "longest_repeat": 4, "wall_vs_reported": 1.0, "peak_footprint_gb": 10.0, "swap_growth_gb": 0.0}
+{"method": "N+q4", "prompt": "needle_16k", "tokens_reencoded": 300, "agree": 0.95, "nll": 0.3418, "codes": 3, "distinct4": 0.99, "longest_repeat": 5, "wall_vs_reported": 1.0, "peak_footprint_gb": 10.0, "swap_growth_gb": 0.0}
+{"method": "N+q4", "prompt": "needle_32k", "tokens_reencoded": 300, "agree": 0.9467, "nll": 0.3953, "codes": 3, "distinct4": 0.99, "longest_repeat": 5, "wall_vs_reported": 1.0, "peak_footprint_gb": 10.0, "swap_growth_gb": 0.0}

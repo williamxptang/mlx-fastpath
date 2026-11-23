@@ -1,0 +1,1 @@
+{"prompt": "kl", "label": "optiq-n2", "kl_mean": 0.08506, "kl_p99": 0.3996, "top1": 0.8535, "model": "q2b", "weights": "optiq-n2", "job": "kl-q2b-optiq-n2", "cap_gb": 16.47}

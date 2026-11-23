@@ -1,0 +1,6 @@
+    with fp.MemoryGuard(min_free_gb=11, max_footprint_gb=11) as g:
+    raise RuntimeError(f"[MemoryGuard] only {have:.1f} GB free, need {self.min_free} GB: not starting")
+RuntimeError: [MemoryGuard] only 10.5 GB free, need 11 GB: not starting
+    with fp.MemoryGuard(min_free_gb=11, max_footprint_gb=11) as g:
+    raise RuntimeError(f"[MemoryGuard] only {have:.1f} GB free, need {self.min_free} GB: not starting")
+RuntimeError: [MemoryGuard] only 10.6 GB free, need 11 GB: not starting

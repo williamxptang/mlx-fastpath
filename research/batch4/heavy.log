@@ -1,0 +1,76 @@
+23:30:40 HEAVY start: 15 jobs, chain cap 90 min
+23:30:40 SKIP H1-sustained: system swap 3.36 GB, at the 3 GB limit
+23:30:40 SKIP H2-optiq-ar-0: needs ~8.7 GB, cap would be 8.2 GB (9.2 free)
+23:30:40 SKIP H2-ar-n2off-1: needs ~8.7 GB, cap would be 8.2 GB (9.2 free)
+23:30:40 SKIP H2-ar-n2on-2: system swap 3.36 GB, at the 3 GB limit
+23:30:41 SKIP H2-A-n2off-3: needs ~8.7 GB, cap would be 8.2 GB (9.2 free)
+23:30:41 SKIP H2-A-n2on-4: system swap 3.36 GB, at the 3 GB limit
+23:30:41 SKIP H2-A-idset-n2on-5: system swap 3.36 GB, at the 3 GB limit
+23:30:41 SKIP H2-A-idset-n2on-6: system swap 3.36 GB, at the 3 GB limit
+23:30:41 SKIP H2-A-n2on-7: system swap 3.36 GB, at the 3 GB limit
+23:30:41 SKIP H2-A-n2off-8: needs ~8.7 GB, cap would be 8.2 GB (9.2 free)
+23:30:41 SKIP H2-ar-n2on-9: system swap 3.36 GB, at the 3 GB limit
+23:30:41 SKIP H2-ar-n2off-10: needs ~8.7 GB, cap would be 8.2 GB (9.2 free)
+23:30:41 SKIP H2-optiq-ar-11: needs ~8.7 GB, cap would be 8.2 GB (9.2 free)
+23:30:41 SKIP H3-slow-tests: needs ~10.0 GB, cap would be 8.2 GB (9.2 free)
+23:30:41 NOT RUN H4-e9-prefill: condition false
+23:30:41 RETRY H1-sustained (first try: skipped)
+23:30:41 SKIP H1-sustained: system swap 3.36 GB, at the 3 GB limit
+23:30:41 RETRY H2-optiq-ar-0 (first try: skipped)
+23:30:41 SKIP H2-optiq-ar-0: needs ~8.7 GB, cap would be 8.2 GB (9.2 free)
+23:30:41 RETRY H2-ar-n2off-1 (first try: skipped)
+23:30:41 SKIP H2-ar-n2off-1: needs ~8.7 GB, cap would be 8.2 GB (9.2 free)
+23:30:41 RETRY H2-ar-n2on-2 (first try: skipped)
+23:30:41 SKIP H2-ar-n2on-2: system swap 3.36 GB, at the 3 GB limit
+23:30:41 RETRY H2-A-n2off-3 (first try: skipped)
+23:30:41 SKIP H2-A-n2off-3: needs ~8.7 GB, cap would be 8.2 GB (9.2 free)
+23:30:41 RETRY H2-A-n2on-4 (first try: skipped)
+23:30:41 SKIP H2-A-n2on-4: system swap 3.36 GB, at the 3 GB limit
+23:30:41 RETRY H2-A-idset-n2on-5 (first try: skipped)
+23:30:41 SKIP H2-A-idset-n2on-5: system swap 3.36 GB, at the 3 GB limit
+23:30:41 RETRY H2-A-idset-n2on-6 (first try: skipped)
+23:30:41 SKIP H2-A-idset-n2on-6: system swap 3.36 GB, at the 3 GB limit
+23:30:41 RETRY H2-A-n2on-7 (first try: skipped)
+23:30:41 SKIP H2-A-n2on-7: system swap 3.36 GB, at the 3 GB limit
+23:30:41 RETRY H2-A-n2off-8 (first try: skipped)
+23:30:41 SKIP H2-A-n2off-8: needs ~8.7 GB, cap would be 8.2 GB (9.2 free)
+23:30:41 RETRY H2-ar-n2on-9 (first try: skipped)
+23:30:41 SKIP H2-ar-n2on-9: system swap 3.36 GB, at the 3 GB limit
+23:30:41 RETRY H2-ar-n2off-10 (first try: skipped)
+23:30:41 SKIP H2-ar-n2off-10: needs ~8.7 GB, cap would be 8.2 GB (9.2 free)
+23:30:41 RETRY H2-optiq-ar-11 (first try: skipped)
+23:30:41 SKIP H2-optiq-ar-11: needs ~8.7 GB, cap would be 8.2 GB (9.2 free)
+23:30:41 RETRY H3-slow-tests (first try: skipped)
+23:30:41 SKIP H3-slow-tests: needs ~10.0 GB, cap would be 8.2 GB (9.2 free)
+23:30:41 HEAVY done in 0.0 min: not run (condition) x1, skipped (retry) x14
+23:32:36 HEAVY start: 15 jobs, chain cap 90 min
+23:32:36 START H1-sustained: free 16.7 GB, cap 15.8 GB, expected peak 7.6 GB, swap 1.79 GB (may grow 1.21)
+23:42:58 END H1-sustained: ok, 69 rows, 622s, peak 6.89 GB, swap growth ? GB
+23:42:58 START H2-optiq-ar-0: free 15.6 GB, cap 14.6 GB, expected peak 8.7 GB, swap 1.77 GB (may grow 1.23)
+23:44:32 END H2-optiq-ar-0: ok, 4 rows, 94s, peak 8.29 GB, swap growth 0.0 GB
+23:44:32 START H2-ar-n2off-1: free 15.1 GB, cap 14.1 GB, expected peak 8.7 GB, swap 1.77 GB (may grow 1.23)
+23:45:57 END H2-ar-n2off-1: ok, 4 rows, 85s, peak 8.46 GB, swap growth ? GB
+23:45:57 START H2-ar-n2on-2: free 14.7 GB, cap 13.7 GB, expected peak 7.8 GB, swap 1.77 GB (may grow 1.23)
+23:47:13 END H2-ar-n2on-2: ok, 4 rows, 76s, peak 7.53 GB, swap growth ? GB
+23:47:13 START H2-A-n2off-3: free 14.1 GB, cap 13.1 GB, expected peak 8.7 GB, swap 1.77 GB (may grow 1.23)
+23:48:19 END H2-A-n2off-3: ok, 4 rows, 66s, peak 8.48 GB, swap growth ? GB
+23:48:19 START H2-A-n2on-4: free 15.4 GB, cap 14.4 GB, expected peak 7.8 GB, swap 1.77 GB (may grow 1.23)
+23:49:19 END H2-A-n2on-4: ok, 4 rows, 60s, peak 7.56 GB, swap growth ? GB
+23:49:19 START H2-A-idset-n2on-5: free 15.7 GB, cap 14.7 GB, expected peak 7.9 GB, swap 1.77 GB (may grow 1.23)
+23:50:19 END H2-A-idset-n2on-5: ok, 4 rows, 60s, peak 7.61 GB, swap growth ? GB
+23:50:20 START H2-A-idset-n2on-6: free 15.8 GB, cap 14.8 GB, expected peak 7.9 GB, swap 1.77 GB (may grow 1.23)
+23:51:19 END H2-A-idset-n2on-6: ok, 4 rows, 60s, peak 7.5 GB, swap growth ? GB
+23:51:19 START H2-A-n2on-7: free 15.8 GB, cap 14.8 GB, expected peak 7.8 GB, swap 1.77 GB (may grow 1.23)
+23:52:19 END H2-A-n2on-7: ok, 4 rows, 60s, peak 7.51 GB, swap growth ? GB
+23:52:19 START H2-A-n2off-8: free 15.8 GB, cap 14.8 GB, expected peak 8.7 GB, swap 1.77 GB (may grow 1.23)
+23:53:25 END H2-A-n2off-8: ok, 4 rows, 66s, peak 8.34 GB, swap growth ? GB
+23:53:25 START H2-ar-n2on-9: free 15.8 GB, cap 14.8 GB, expected peak 7.8 GB, swap 1.77 GB (may grow 1.23)
+23:54:41 END H2-ar-n2on-9: ok, 4 rows, 75s, peak 7.6 GB, swap growth ? GB
+23:54:41 START H2-ar-n2off-10: free 15.7 GB, cap 14.7 GB, expected peak 8.7 GB, swap 1.77 GB (may grow 1.23)
+23:56:05 END H2-ar-n2off-10: ok, 4 rows, 85s, peak 8.49 GB, swap growth ? GB
+23:56:05 START H2-optiq-ar-11: free 15.8 GB, cap 14.8 GB, expected peak 8.7 GB, swap 1.77 GB (may grow 1.23)
+23:57:39 END H2-optiq-ar-11: ok, 4 rows, 94s, peak 8.24 GB, swap growth 0.0 GB
+23:57:39 START H3-slow-tests: free 15.8 GB, cap 14.8 GB, expected peak 10.0 GB, swap 1.77 GB (may grow 1.23)
+23:58:08 END H3-slow-tests: ok, 0 rows, 29s, peak ? GB, swap growth ? GB
+23:58:08 NOT RUN H4-e9-prefill: condition false
+23:58:08 HEAVY done in 25.5 min: not run (condition) x1, ok x14

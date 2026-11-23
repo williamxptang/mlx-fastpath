@@ -1,0 +1,13 @@
+== with the fix
+3 passed, 2 warnings in 6.71s
+== without the fix (optiq's own measure_draft_cost swapped back in)
+E       assert [11] == [6]
+E         
+E         At index 0 diff: 11 != 6
+E         Use -v to get more diff
+E       assert ([16, 16, 16, 16, 16, 16] and {16} == {64}
+E        +  where [16, 16, 16, 16, 16, 16] = <test_draft_cost.StandInHead object at 0x11fe347d0>.widths
+E         
+E         Extra items in the left set:
+E         16
+E         Extra items in the right set:

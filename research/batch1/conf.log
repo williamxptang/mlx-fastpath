@@ -1,0 +1,13 @@
+{"prompt": "chat", "positions": 299, "p_a1": 0.699, "p_a2_given_a1": 0.541, "peak_footprint_gb": 7.84, "swap_growth_gb": 0.0}
+{"prompt": "chat", "context": 332, "verify_ms": {"1": 55.5, "2": 56.93, "3": 57.18, "4": 58.76}, "verify_range": {"1": [55.24, 56.9], "2": [53.01, 63.25], "3": [56.99, 59.4], "4": [57.35, 59.58]}, "draft_step_ms": 3.39, "peak_footprint_gb": 8.29, "swap_growth_gb": 0.0}
+{"prompt": "math", "positions": 299, "p_a1": 0.839, "p_a2_given_a1": 0.745, "peak_footprint_gb": 8.29, "swap_growth_gb": 0.0}
+{"prompt": "math", "context": 404, "verify_ms": {"1": 56.55, "2": 56.41, "3": 56.97, "4": 58.64}, "verify_range": {"1": [55.15, 78.11], "2": [56.17, 57.8], "3": [56.76, 59.02], "4": [58.37, 62.95]}, "draft_step_ms": 3.39, "peak_footprint_gb": 8.29, "swap_growth_gb": 0.0}
+{"prompt": "code_edit", "positions": 299, "p_a1": 0.625, "p_a2_given_a1": 0.503, "peak_footprint_gb": 8.92, "swap_growth_gb": 0.0}
+{"prompt": "code_edit", "context": 964, "verify_ms": {"1": 55.85, "2": 57.02, "3": 58.12, "4": 58.95}, "verify_range": {"1": [55.58, 56.35], "2": [56.4, 73.74], "3": [57.33, 60.12], "4": [58.66, 59.97]}, "draft_step_ms": 3.39, "peak_footprint_gb": 8.92, "swap_growth_gb": 0.0}
+{"prompt": "needle_8k", "positions": 299, "p_a1": 0.528, "p_a2_given_a1": 0.424, "peak_footprint_gb": 9.41, "swap_growth_gb": 0.0}
+{"prompt": "needle_8k", "context": 8395, "verify_ms": {"1": 58.26, "2": 59.72, "3": 61.41, "4": 63.23}, "verify_range": {"1": [57.92, 58.72], "2": [58.99, 71.43], "3": [60.81, 69.37], "4": [62.55, 64.49]}, "draft_step_ms": 3.4, "peak_footprint_gb": 9.41, "swap_growth_gb": 0.0}
+{"prompt": "needle_16k", "positions": 299, "p_a1": 0.592, "p_a2_given_a1": 0.531, "peak_footprint_gb": 9.43, "swap_growth_gb": 0.0}
+{"prompt": "needle_16k", "context": 16395, "verify_ms": {"1": 60.57, "2": 62.32, "3": 63.87, "4": 66.4}, "verify_range": {"1": [60.17, 69.72], "2": [61.8, 72.17], "3": [62.95, 64.8], "4": [64.28, 66.96]}, "draft_step_ms": 3.4, "peak_footprint_gb": 9.43, "swap_growth_gb": 0.0}
+{"prompt": "needle_32k", "positions": 299, "p_a1": 0.475, "p_a2_given_a1": 0.43, "peak_footprint_gb": 10.0, "swap_growth_gb": 0.0}
+{"prompt": "needle_32k", "context": 32395, "verify_ms": {"1": 65.42, "2": 71.68, "3": 75.72, "4": 72.83}, "verify_range": {"1": [64.68, 66.48], "2": [70.24, 79.38], "3": [73.94, 78.77], "4": [71.94, 78.87]}, "draft_step_ms": 3.38, "peak_footprint_gb": 10.0, "swap_growth_gb": 0.0}
+exit=0

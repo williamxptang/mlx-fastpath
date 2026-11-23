@@ -1,0 +1,24 @@
+21:27:57 AB start: 11 jobs, chain cap 180 min
+21:27:57 START q2b-optiq-stock-0: free 10.8 GB, cap 9.8 GB, expected peak 3.3 GB, swap 2.04 GB (may grow 0.96)
+21:28:31 END q2b-optiq-stock-0: ok, 5 rows, 34s, peak 2.79 GB, swap growth 0.0 GB
+21:28:31 START q2b-optiq-fast-ar-0: free 13.7 GB, cap 12.7 GB, expected peak 3.3 GB, swap 2.04 GB (may grow 0.96)
+21:29:05 END q2b-optiq-fast-ar-0: ok, 5 rows, 34s, peak 2.34 GB, swap growth 0.0 GB
+21:29:05 START q2b-optiq-fast-mtp-0: free 13.7 GB, cap 12.7 GB, expected peak 3.3 GB, swap 2.04 GB (may grow 0.96)
+21:29:41 END q2b-optiq-fast-mtp-0: ok, 5 rows, 36s, peak 2.84 GB, swap growth 0.0 GB
+21:29:41 START q2b-optiq-n2-fast-ar-0: free 12.6 GB, cap 11.6 GB, expected peak 3.2 GB, swap 2.04 GB (may grow 0.96)
+21:30:14 END q2b-optiq-n2-fast-ar-0: ok, 5 rows, 33s, peak 2.81 GB, swap growth 0.0 GB
+21:30:14 START q2b-optiq-n2-fast-mtp-0: free 13.2 GB, cap 12.2 GB, expected peak 3.2 GB, swap 2.04 GB (may grow 0.96)
+21:30:47 END q2b-optiq-n2-fast-mtp-0: ok, 5 rows, 33s, peak 2.28 GB, swap growth 0.0 GB
+21:30:47 START q2b-optiq-n2-fast-mtp-1: free 13.9 GB, cap 12.9 GB, expected peak 3.2 GB, swap 2.04 GB (may grow 0.96)
+21:31:21 END q2b-optiq-n2-fast-mtp-1: ok, 5 rows, 33s, peak 2.46 GB, swap growth 0.0 GB
+21:31:21 START q2b-optiq-n2-fast-ar-1: free 16.4 GB, cap 15.4 GB, expected peak 3.2 GB, swap 2.04 GB (may grow 0.96)
+21:31:57 END q2b-optiq-n2-fast-ar-1: ok, 5 rows, 36s, peak 2.11 GB, swap growth 0.0 GB
+21:31:57 START q2b-optiq-fast-mtp-1: free 16.6 GB, cap 15.6 GB, expected peak 3.3 GB, swap 2.04 GB (may grow 0.96)
+21:32:34 END q2b-optiq-fast-mtp-1: ok, 5 rows, 37s, peak 2.88 GB, swap growth 0.0 GB
+21:32:34 START q2b-optiq-fast-ar-1: free 17.7 GB, cap 16.7 GB, expected peak 3.3 GB, swap 2.04 GB (may grow 0.96)
+21:33:11 END q2b-optiq-fast-ar-1: ok, 5 rows, 37s, peak 2.47 GB, swap growth 0.0 GB
+21:33:11 START q2b-optiq-stock-1: free 18.2 GB, cap 17.2 GB, expected peak 3.3 GB, swap 2.04 GB (may grow 0.96)
+21:33:48 END q2b-optiq-stock-1: ok, 5 rows, 37s, peak 2.92 GB, swap growth 0.0 GB
+21:33:48 START kl-q2b-optiq-n2: free 17.5 GB, cap 16.5 GB, expected peak 5.7 GB, swap 2.04 GB (may grow 0.96)
+21:34:09 END kl-q2b-optiq-n2: ok, 1 rows, 22s, peak 7.5 GB, swap growth 0.0 GB
+21:34:09 AB done in 6.2 min: ok x11

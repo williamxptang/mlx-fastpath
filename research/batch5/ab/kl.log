@@ -1,0 +1,22 @@
+20:50:46 AB start: 10 jobs, chain cap 180 min
+20:50:46 START kl-q08-bf16-ref: free 14.2 GB, cap 13.2 GB, expected peak 4.5 GB, swap 1.52 GB (may grow 1.48)
+20:51:00 END kl-q08-bf16-ref: ok, 0 rows, 14s, peak 4.55 GB, swap growth 0.0 GB
+20:51:00 START kl-q08-int4: free 14.1 GB, cap 13.1 GB, expected peak 4.5 GB, swap 1.52 GB (may grow 1.48)
+20:51:16 END kl-q08-int4: ok, 1 rows, 17s, peak 6.85 GB, swap growth 0.0 GB
+20:51:16 START kl-q08-optiq: free 14.2 GB, cap 13.2 GB, expected peak 4.8 GB, swap 1.52 GB (may grow 1.48)
+20:51:33 END kl-q08-optiq: ok, 1 rows, 17s, peak 6.81 GB, swap growth 0.0 GB
+20:51:33 START kl-q08-optiq-n2: free 14.1 GB, cap 13.1 GB, expected peak 4.7 GB, swap 1.52 GB (may grow 1.48)
+20:51:51 END kl-q08-optiq-n2: ok, 1 rows, 18s, peak 6.99 GB, swap growth 0.0 GB
+20:51:51 START kl-q2b-bf16-ref: free 14.1 GB, cap 13.1 GB, expected peak 7.3 GB, swap 1.52 GB (may grow 1.48)
+20:52:05 END kl-q2b-bf16-ref: ok, 0 rows, 14s, peak 7.03 GB, swap growth 0.0 GB
+20:52:05 START kl-q2b-int4: free 14.0 GB, cap 13.0 GB, expected peak 5.5 GB, swap 1.52 GB (may grow 1.48)
+20:52:22 END kl-q2b-int4: ok, 1 rows, 17s, peak 7.44 GB, swap growth 0.0 GB
+20:52:22 START kl-q2b-optiq: free 14.0 GB, cap 13.1 GB, expected peak 5.8 GB, swap 1.52 GB (may grow 1.48)
+20:52:39 END kl-q2b-optiq: ok, 1 rows, 17s, peak 7.64 GB, swap growth 0.0 GB
+20:52:39 START kl-gemma-bf16-ref: free 14.0 GB, cap 13.0 GB, expected peak 12.0 GB, swap 1.52 GB (may grow 1.48)
+20:53:05 END kl-gemma-bf16-ref: ok, 0 rows, 27s, peak 12.0 GB, swap growth 0.782 GB
+20:53:05 START kl-gemma-int4: free 15.6 GB, cap 14.6 GB, expected peak 6.5 GB, swap 2.36 GB (may grow 0.64)
+20:53:26 END kl-gemma-int4: ok, 1 rows, 21s, peak 9.06 GB, swap growth -0.016 GB
+20:53:26 START kl-gemma-optiq: free 15.5 GB, cap 14.5 GB, expected peak 8.1 GB, swap 2.33 GB (may grow 0.67)
+20:53:47 END kl-gemma-optiq: ok, 1 rows, 21s, peak 11.0 GB, swap growth 0.0 GB
+20:53:47 AB done in 3.0 min: ok x10

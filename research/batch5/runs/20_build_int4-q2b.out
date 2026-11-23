@@ -1,0 +1,14 @@
+start 20:09:21
+[INFO] Loading
+[INFO] Using dtype: bfloat16
+[INFO] Quantizing
+[INFO] Quantized model with 4.503 bits per weight.
+  [mtp] Found 15 MTP tensors in source across 1 shard(s).
+  [mtp] Fetching shards + extracting MTP tensors...
+  [mtp] Extracted 15 tensors, 60,828,160 params.
+  [mtp] Quantizing projections at 4-bit (group_size=64); norms + mtp.fc.weight stay at BF16.
+  [mtp] Wrote optiq/mtp.safetensors (44.1 MB).
+  [mtp] Registered sidecar in config.json: ['mtp_file', 'mtp_tensor_count', 'mtp_policy', 'mtplx_mtp_quantization', 'mtp_num_hidden_layers']
+[guard] {'peak_footprint_gb': 2.44, 'swap_growth_gb': 0.0} MLX peak GB 2.64
+exit=0
+end 20:09:35

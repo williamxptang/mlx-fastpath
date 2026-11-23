@@ -1,0 +1,287 @@
+OptiQ: Converting Qwen3.5-0.8B-bf16 (type=auto)
+  Method: optiq
+  Target BPW: 5.0, candidate bits: [4, 8], group_size: 64
+  Reference: auto
+  Calibration mix: optiq
+
+[1/4] Resolving Qwen3.5-0.8B-bf16…
+  snapshot at Qwen3.5-0.8B-bf16
+  [auto] bf16 ≈ 1.63 GB fits in available RAM (16.2 GB) — using bf16 reference
+  loaded 48 calibration sequences (seq_len=512) from optiq mix [agent 56376t · code 8916t · instruct 947t · prose 1417t · thought 9331t · tool 9232t, chat_template=True]
+
+[2/4] Sensitivity analysis (reference=bf16, bits=[4, 8])…
+  [exact] resuming from Qwen3.5-0.8B-OptiQ-4bit/sensitivity_checkpoint.json: 16 layers already done
+  [exact] calibration: 24 samples
+  [exact/bf16] 186 layers × 2 bit-widths
+  [exact/bf16] reference logits…
+  [exact/bf16]  17/186 language_model.model.layers.21.mlp.down_proj  4b=1.035e-03  8b=3.770e-04
+  [exact/bf16]  18/186 language_model.model.layers.21.mlp.gate_proj  4b=9.019e-04  8b=3.717e-04
+  [exact/bf16]  19/186 language_model.model.layers.21.linear_attn.out_proj  4b=1.146e-03  8b=3.887e-04
+  [exact/bf16]  20/186 language_model.model.layers.21.linear_attn.in_proj_a  4b=4.273e-04  8b=3.516e-04
+  [exact/bf16]  21/186 language_model.model.layers.21.linear_attn.in_proj_b  4b=4.093e-04  8b=3.542e-04
+  [exact/bf16]  22/186 language_model.model.layers.21.linear_attn.in_proj_z  4b=8.477e-04  8b=3.856e-04
+  [exact/bf16]  23/186 language_model.model.layers.21.linear_attn.in_proj_qkv  4b=1.511e-03  8b=3.911e-04
+  [exact/bf16]  24/186 language_model.model.layers.20.mlp.up_proj  4b=1.140e-03  8b=4.073e-04
+  [exact/bf16]  25/186 language_model.model.layers.20.mlp.down_proj  4b=1.110e-03  8b=4.064e-04
+  [exact/bf16]  26/186 language_model.model.layers.20.mlp.gate_proj  4b=9.633e-04  8b=4.055e-04
+  [exact/bf16]  27/186 language_model.model.layers.20.linear_attn.out_proj  4b=1.530e-03  8b=4.262e-04
+  [exact/bf16]  28/186 language_model.model.layers.20.linear_attn.in_proj_a  4b=4.216e-04  8b=3.865e-04
+  [exact/bf16]  29/186 language_model.model.layers.20.linear_attn.in_proj_b  4b=4.246e-04  8b=3.886e-04
+  [exact/bf16]  30/186 language_model.model.layers.20.linear_attn.in_proj_z  4b=9.050e-04  8b=4.092e-04
+  [exact/bf16]  31/186 language_model.model.layers.20.linear_attn.in_proj_qkv  4b=1.288e-03  8b=4.242e-04
+  [exact/bf16]  32/186 language_model.model.layers.19.mlp.up_proj  4b=1.353e-03  8b=4.431e-04
+  [exact/bf16]  33/186 language_model.model.layers.19.mlp.down_proj  4b=1.530e-03  8b=4.482e-04
+  [exact/bf16]  34/186 language_model.model.layers.19.mlp.gate_proj  4b=1.142e-03  8b=4.285e-04
+  [exact/bf16]  35/186 language_model.model.layers.19.self_attn.o_proj  4b=3.410e-03  8b=4.755e-04
+  [exact/bf16]  36/186 language_model.model.layers.19.self_attn.v_proj  4b=1.466e-03  8b=4.547e-04
+  [exact/bf16]  37/186 language_model.model.layers.19.self_attn.k_proj  4b=8.239e-04  8b=4.824e-04
+  [exact/bf16]  38/186 language_model.model.layers.19.self_attn.q_proj  4b=1.046e-03  8b=4.773e-04
+  [exact/bf16]  39/186 language_model.model.layers.18.mlp.up_proj  4b=1.613e-03  8b=5.016e-04
+  [exact/bf16]  40/186 language_model.model.layers.18.mlp.down_proj  4b=1.765e-03  8b=4.879e-04
+  [exact/bf16]  41/186 language_model.model.layers.18.mlp.gate_proj  4b=1.482e-03  8b=4.937e-04
+  [exact/bf16]  42/186 language_model.model.layers.18.linear_attn.out_proj  4b=1.921e-03  8b=5.197e-04
+  [exact/bf16]  43/186 language_model.model.layers.18.linear_attn.in_proj_a  4b=5.031e-04  8b=4.762e-04
+  [exact/bf16]  44/186 language_model.model.layers.18.linear_attn.in_proj_b  4b=5.270e-04  8b=4.785e-04
+  [exact/bf16]  45/186 language_model.model.layers.18.linear_attn.in_proj_z  4b=1.219e-03  8b=5.078e-04
+  [exact/bf16]  46/186 language_model.model.layers.18.linear_attn.in_proj_qkv  4b=1.691e-03  8b=5.166e-04
+  [exact/bf16]  47/186 language_model.model.layers.17.mlp.up_proj  4b=1.717e-03  8b=5.279e-04
+  [exact/bf16]  48/186 language_model.model.layers.17.mlp.down_proj  4b=2.089e-03  8b=5.310e-04
+  [exact/bf16]  49/186 language_model.model.layers.17.mlp.gate_proj  4b=1.561e-03  8b=5.264e-04
+  [exact/bf16]  50/186 language_model.model.layers.17.linear_attn.out_proj  4b=2.660e-03  8b=5.672e-04
+  [exact/bf16]  51/186 language_model.model.layers.17.linear_attn.in_proj_a  4b=5.960e-04  8b=5.174e-04
+  [exact/bf16]  52/186 language_model.model.layers.17.linear_attn.in_proj_b  4b=5.526e-04  8b=5.097e-04
+  [exact/bf16]  53/186 language_model.model.layers.17.linear_attn.in_proj_z  4b=1.392e-03  8b=5.390e-04
+  [exact/bf16]  54/186 language_model.model.layers.17.linear_attn.in_proj_qkv  4b=2.147e-03  8b=5.503e-04
+  [exact/bf16]  55/186 language_model.model.layers.16.mlp.up_proj  4b=2.477e-03  8b=5.782e-04
+  [exact/bf16]  56/186 language_model.model.layers.16.mlp.down_proj  4b=2.501e-03  8b=5.649e-04
+  [exact/bf16]  57/186 language_model.model.layers.16.mlp.gate_proj  4b=2.161e-03  8b=5.799e-04
+  [exact/bf16]  58/186 language_model.model.layers.16.linear_attn.out_proj  4b=3.862e-03  8b=6.177e-04
+  [exact/bf16]  59/186 language_model.model.layers.16.linear_attn.in_proj_a  4b=6.095e-04  8b=5.550e-04
+  [exact/bf16]  60/186 language_model.model.layers.16.linear_attn.in_proj_b  4b=6.125e-04  8b=5.484e-04
+  [exact/bf16]  61/186 language_model.model.layers.16.linear_attn.in_proj_z  4b=1.582e-03  8b=5.906e-04
+  [exact/bf16]  62/186 language_model.model.layers.16.linear_attn.in_proj_qkv  4b=2.331e-03  8b=6.018e-04
+  [exact/bf16]  63/186 language_model.model.layers.15.mlp.up_proj  4b=4.028e-03  8b=6.385e-04
+  [exact/bf16]  64/186 language_model.model.layers.15.mlp.down_proj  4b=3.902e-03  8b=6.276e-04
+  [exact/bf16]  65/186 language_model.model.layers.15.mlp.gate_proj  4b=2.451e-03  8b=6.095e-04
+  [exact/bf16]  66/186 language_model.model.layers.15.self_attn.o_proj  4b=6.608e-03  8b=6.557e-04
+  [exact/bf16]  67/186 language_model.model.layers.15.self_attn.v_proj  4b=2.119e-03  8b=6.212e-04
+  [exact/bf16]  68/186 language_model.model.layers.15.self_attn.k_proj  4b=1.322e-03  8b=6.473e-04
+  [exact/bf16]  69/186 language_model.model.layers.15.self_attn.q_proj  4b=1.749e-03  8b=6.636e-04
+  [exact/bf16]  70/186 language_model.model.layers.14.mlp.up_proj  4b=3.262e-03  8b=6.748e-04
+  [exact/bf16]  71/186 language_model.model.layers.14.mlp.down_proj  4b=5.442e-03  8b=7.098e-04
+  [exact/bf16]  72/186 language_model.model.layers.14.mlp.gate_proj  4b=2.657e-03  8b=7.000e-04
+  [exact/bf16]  73/186 language_model.model.layers.14.linear_attn.out_proj  4b=3.610e-03  8b=7.180e-04
+  [exact/bf16]  74/186 language_model.model.layers.14.linear_attn.in_proj_a  4b=7.497e-04  8b=6.622e-04
+  [exact/bf16]  75/186 language_model.model.layers.14.linear_attn.in_proj_b  4b=7.373e-04  8b=6.779e-04
+  [exact/bf16]  76/186 language_model.model.layers.14.linear_attn.in_proj_z  4b=1.456e-03  8b=7.124e-04
+  [exact/bf16]  77/186 language_model.model.layers.14.linear_attn.in_proj_qkv  4b=4.015e-03  8b=7.145e-04
+  [exact/bf16]  78/186 language_model.model.layers.13.mlp.up_proj  4b=3.162e-03  8b=7.247e-04
+  [exact/bf16]  79/186 language_model.model.layers.13.mlp.down_proj  4b=3.641e-03  8b=7.600e-04
+  [exact/bf16]  80/186 language_model.model.layers.13.mlp.gate_proj  4b=2.503e-03  8b=7.306e-04
+  [exact/bf16]  81/186 language_model.model.layers.13.linear_attn.out_proj  4b=3.681e-03  8b=7.702e-04
+  [exact/bf16]  82/186 language_model.model.layers.13.linear_attn.in_proj_a  4b=7.646e-04  8b=7.302e-04
+  [exact/bf16]  83/186 language_model.model.layers.13.linear_attn.in_proj_b  4b=7.930e-04  8b=7.169e-04
+  [exact/bf16]  84/186 language_model.model.layers.13.linear_attn.in_proj_z  4b=1.701e-03  8b=7.487e-04
+  [exact/bf16]  85/186 language_model.model.layers.13.linear_attn.in_proj_qkv  4b=4.396e-03  8b=7.796e-04
+  [exact/bf16]  86/186 language_model.model.layers.12.mlp.up_proj  4b=3.730e-03  8b=7.594e-04
+  [exact/bf16]  87/186 language_model.model.layers.12.mlp.down_proj  4b=4.100e-03  8b=7.969e-04
+  [exact/bf16]  88/186 language_model.model.layers.12.mlp.gate_proj  4b=3.001e-03  8b=7.636e-04
+  [exact/bf16]  89/186 language_model.model.layers.12.linear_attn.out_proj  4b=3.917e-03  8b=8.138e-04
+  [exact/bf16]  90/186 language_model.model.layers.12.linear_attn.in_proj_a  4b=8.376e-04  8b=7.755e-04
+  [exact/bf16]  91/186 language_model.model.layers.12.linear_attn.in_proj_b  4b=8.177e-04  8b=7.997e-04
+  [exact/bf16]  92/186 language_model.model.layers.12.linear_attn.in_proj_z  4b=2.099e-03  8b=7.922e-04
+  [exact/bf16]  93/186 language_model.model.layers.12.linear_attn.in_proj_qkv  4b=3.724e-03  8b=8.066e-04
+  [exact/bf16]  94/186 language_model.model.layers.11.mlp.up_proj  4b=4.560e-03  8b=8.731e-04
+  [exact/bf16]  95/186 language_model.model.layers.11.mlp.down_proj  4b=4.757e-03  8b=8.353e-04
+  [exact/bf16]  96/186 language_model.model.layers.11.mlp.gate_proj  4b=3.263e-03  8b=8.394e-04
+  [exact/bf16]  97/186 language_model.model.layers.11.self_attn.o_proj  4b=8.728e-03  8b=9.228e-04
+  [exact/bf16]  98/186 language_model.model.layers.11.self_attn.v_proj  4b=3.231e-03  8b=8.800e-04
+  [exact/bf16]  99/186 language_model.model.layers.11.self_attn.k_proj  4b=1.727e-03  8b=8.844e-04
+  [exact/bf16] 100/186 language_model.model.layers.11.self_attn.q_proj  4b=2.684e-03  8b=9.327e-04
+  [exact/bf16] 101/186 language_model.model.layers.10.mlp.up_proj  4b=4.367e-03  8b=9.781e-04
+  [exact/bf16] 102/186 language_model.model.layers.10.mlp.down_proj  4b=4.828e-03  8b=9.730e-04
+  [exact/bf16] 103/186 language_model.model.layers.10.mlp.gate_proj  4b=3.246e-03  8b=9.538e-04
+  [exact/bf16] 104/186 language_model.model.layers.10.linear_attn.out_proj  4b=5.266e-03  8b=1.018e-03
+  [exact/bf16] 105/186 language_model.model.layers.10.linear_attn.in_proj_a  4b=1.025e-03  8b=9.469e-04
+  [exact/bf16] 106/186 language_model.model.layers.10.linear_attn.in_proj_b  4b=1.035e-03  8b=9.560e-04
+  [exact/bf16] 107/186 language_model.model.layers.10.linear_attn.in_proj_z  4b=2.166e-03  8b=1.009e-03
+  [exact/bf16] 108/186 language_model.model.layers.10.linear_attn.in_proj_qkv  4b=6.037e-03  8b=1.066e-03
+  [exact/bf16] 109/186 language_model.model.layers.9.mlp.up_proj  4b=4.870e-03  8b=9.817e-04
+  [exact/bf16] 110/186 language_model.model.layers.9.mlp.down_proj  4b=4.492e-03  8b=9.928e-04
+  [exact/bf16] 111/186 language_model.model.layers.9.mlp.gate_proj  4b=3.501e-03  8b=1.032e-03
+  [exact/bf16] 112/186 language_model.model.layers.9.linear_attn.out_proj  4b=4.797e-03  8b=1.049e-03
+  [exact/bf16] 113/186 language_model.model.layers.9.linear_attn.in_proj_a  4b=1.096e-03  8b=9.679e-04
+  [exact/bf16] 114/186 language_model.model.layers.9.linear_attn.in_proj_b  4b=1.241e-03  8b=1.035e-03
+  [exact/bf16] 115/186 language_model.model.layers.9.linear_attn.in_proj_z  4b=2.481e-03  8b=1.028e-03
+  [exact/bf16] 116/186 language_model.model.layers.9.linear_attn.in_proj_qkv  4b=4.619e-03  8b=1.099e-03
+  [exact/bf16] 117/186 language_model.model.layers.8.mlp.up_proj  4b=5.103e-03  8b=1.038e-03
+  [exact/bf16] 118/186 language_model.model.layers.8.mlp.down_proj  4b=5.724e-03  8b=1.075e-03
+  [exact/bf16] 119/186 language_model.model.layers.8.mlp.gate_proj  4b=4.026e-03  8b=1.108e-03
+  [exact/bf16] 120/186 language_model.model.layers.8.linear_attn.out_proj  4b=6.448e-03  8b=1.155e-03
+  [exact/bf16] 121/186 language_model.model.layers.8.linear_attn.in_proj_a  4b=1.180e-03  8b=1.049e-03
+  [exact/bf16] 122/186 language_model.model.layers.8.linear_attn.in_proj_b  4b=1.117e-03  8b=1.111e-03
+  [exact/bf16] 123/186 language_model.model.layers.8.linear_attn.in_proj_z  4b=3.079e-03  8b=1.110e-03
+  [exact/bf16] 124/186 language_model.model.layers.8.linear_attn.in_proj_qkv  4b=5.271e-03  8b=1.159e-03
+  [exact/bf16] 125/186 language_model.model.layers.7.mlp.up_proj  4b=6.672e-03  8b=1.177e-03
+  [exact/bf16] 126/186 language_model.model.layers.7.mlp.down_proj  4b=7.575e-03  8b=1.154e-03
+  [exact/bf16] 127/186 language_model.model.layers.7.mlp.gate_proj  4b=5.014e-03  8b=1.255e-03
+  [exact/bf16] 128/186 language_model.model.layers.7.self_attn.o_proj  4b=1.444e-02  8b=1.373e-03
+  [exact/bf16] 129/186 language_model.model.layers.7.self_attn.v_proj  4b=5.731e-03  8b=1.255e-03
+  [exact/bf16] 130/186 language_model.model.layers.7.self_attn.k_proj  4b=2.300e-03  8b=1.311e-03
+  [exact/bf16] 131/186 language_model.model.layers.7.self_attn.q_proj  4b=3.993e-03  8b=1.289e-03
+  [exact/bf16] 132/186 language_model.model.layers.6.mlp.up_proj  4b=7.557e-03  8b=1.462e-03
+  [exact/bf16] 133/186 language_model.model.layers.6.mlp.down_proj  4b=7.362e-03  8b=1.513e-03
+  [exact/bf16] 134/186 language_model.model.layers.6.mlp.gate_proj  4b=5.967e-03  8b=1.503e-03
+  [exact/bf16] 135/186 language_model.model.layers.6.linear_attn.out_proj  4b=8.005e-03  8b=1.446e-03
+  [exact/bf16] 136/186 language_model.model.layers.6.linear_attn.in_proj_a  4b=1.636e-03  8b=1.358e-03
+  [exact/bf16] 137/186 language_model.model.layers.6.linear_attn.in_proj_b  4b=1.594e-03  8b=1.356e-03
+  [exact/bf16] 138/186 language_model.model.layers.6.linear_attn.in_proj_z  4b=4.270e-03  8b=1.517e-03
+  [exact/bf16] 139/186 language_model.model.layers.6.linear_attn.in_proj_qkv  4b=8.076e-03  8b=1.502e-03
+  [exact/bf16] 140/186 language_model.model.layers.5.mlp.up_proj  4b=7.609e-03  8b=1.546e-03
+  [exact/bf16] 141/186 language_model.model.layers.5.mlp.down_proj  4b=8.306e-03  8b=1.516e-03
+  [exact/bf16] 142/186 language_model.model.layers.5.mlp.gate_proj  4b=6.029e-03  8b=1.608e-03
+  [exact/bf16] 143/186 language_model.model.layers.5.linear_attn.out_proj  4b=1.077e-02  8b=1.621e-03
+  [exact/bf16] 144/186 language_model.model.layers.5.linear_attn.in_proj_a  4b=1.668e-03  8b=1.521e-03
+  [exact/bf16] 145/186 language_model.model.layers.5.linear_attn.in_proj_b  4b=1.688e-03  8b=1.468e-03
+  [exact/bf16] 146/186 language_model.model.layers.5.linear_attn.in_proj_z  4b=5.340e-03  8b=1.647e-03
+  [exact/bf16] 147/186 language_model.model.layers.5.linear_attn.in_proj_qkv  4b=7.198e-03  8b=1.630e-03
+  [exact/bf16] 148/186 language_model.model.layers.4.mlp.up_proj  4b=8.022e-03  8b=1.585e-03
+  [exact/bf16] 149/186 language_model.model.layers.4.mlp.down_proj  4b=7.041e-03  8b=1.700e-03
+  [exact/bf16] 150/186 language_model.model.layers.4.mlp.gate_proj  4b=6.558e-03  8b=1.604e-03
+  [exact/bf16] 151/186 language_model.model.layers.4.linear_attn.out_proj  4b=9.261e-03  8b=1.957e-03
+  [exact/bf16] 152/186 language_model.model.layers.4.linear_attn.in_proj_a  4b=1.782e-03  8b=1.551e-03
+  [exact/bf16] 153/186 language_model.model.layers.4.linear_attn.in_proj_b  4b=1.846e-03  8b=1.613e-03
+  [exact/bf16] 154/186 language_model.model.layers.4.linear_attn.in_proj_z  4b=5.213e-03  8b=1.594e-03
+  [exact/bf16] 155/186 language_model.model.layers.4.linear_attn.in_proj_qkv  4b=7.477e-03  8b=1.913e-03
+  [exact/bf16] 156/186 language_model.model.layers.3.mlp.up_proj  4b=7.123e-03  8b=1.794e-03
+  [exact/bf16] 157/186 language_model.model.layers.3.mlp.down_proj  4b=6.900e-03  8b=1.764e-03
+  [exact/bf16] 158/186 language_model.model.layers.3.mlp.gate_proj  4b=6.068e-03  8b=1.704e-03
+  [exact/bf16] 159/186 language_model.model.layers.3.self_attn.o_proj  4b=1.214e-02  8b=1.759e-03
+  [exact/bf16] 160/186 language_model.model.layers.3.self_attn.v_proj  4b=4.872e-03  8b=2.001e-03
+  [exact/bf16] 161/186 language_model.model.layers.3.self_attn.k_proj  4b=2.866e-03  8b=1.768e-03
+  [exact/bf16] 162/186 language_model.model.layers.3.self_attn.q_proj  4b=6.120e-03  8b=1.826e-03
+  [exact/bf16] 163/186 language_model.model.layers.2.mlp.up_proj  4b=8.863e-03  8b=2.070e-03
+  [exact/bf16] 164/186 language_model.model.layers.2.mlp.down_proj  4b=8.064e-03  8b=2.087e-03
+  [exact/bf16] 165/186 language_model.model.layers.2.mlp.gate_proj  4b=6.801e-03  8b=1.986e-03
+  [exact/bf16] 166/186 language_model.model.layers.2.linear_attn.out_proj  4b=1.558e-02  8b=2.053e-03
+  [exact/bf16] 167/186 language_model.model.layers.2.linear_attn.in_proj_a  4b=2.023e-03  8b=1.832e-03
+  [exact/bf16] 168/186 language_model.model.layers.2.linear_attn.in_proj_b  4b=2.317e-03  8b=1.848e-03
+  [exact/bf16] 169/186 language_model.model.layers.2.linear_attn.in_proj_z  4b=5.379e-03  8b=2.052e-03
+  [exact/bf16] 170/186 language_model.model.layers.2.linear_attn.in_proj_qkv  4b=7.925e-03  8b=2.411e-03
+  [exact/bf16] 171/186 language_model.model.layers.1.mlp.up_proj  4b=7.275e-03  8b=1.786e-03
+  [exact/bf16] 172/186 language_model.model.layers.1.mlp.down_proj  4b=7.351e-03  8b=2.227e-03
+  [exact/bf16] 173/186 language_model.model.layers.1.mlp.gate_proj  4b=6.024e-03  8b=2.292e-03
+  [exact/bf16] 174/186 language_model.model.layers.1.linear_attn.out_proj  4b=1.692e-02  8b=2.338e-03
+  [exact/bf16] 175/186 language_model.model.layers.1.linear_attn.in_proj_a  4b=2.305e-03  8b=2.066e-03
+  [exact/bf16] 176/186 language_model.model.layers.1.linear_attn.in_proj_b  4b=2.567e-03  8b=2.000e-03
+  [exact/bf16] 177/186 language_model.model.layers.1.linear_attn.in_proj_z  4b=5.684e-03  8b=2.100e-03
+  [exact/bf16] 178/186 language_model.model.layers.1.linear_attn.in_proj_qkv  4b=8.305e-03  8b=2.281e-03
+  [exact/bf16] 179/186 language_model.model.layers.0.mlp.up_proj  4b=9.780e-03  8b=2.259e-03
+  [exact/bf16] 180/186 language_model.model.layers.0.mlp.down_proj  4b=8.360e-03  8b=2.259e-03
+  [exact/bf16] 181/186 language_model.model.layers.0.mlp.gate_proj  4b=6.848e-03  8b=2.250e-03
+  [exact/bf16] 182/186 language_model.model.layers.0.linear_attn.out_proj  4b=5.281e-02  8b=2.946e-03
+  [exact/bf16] 183/186 language_model.model.layers.0.linear_attn.in_proj_a  4b=2.202e-03  8b=2.047e-03
+  [exact/bf16] 184/186 language_model.model.layers.0.linear_attn.in_proj_b  4b=2.528e-03  8b=2.250e-03
+  [exact/bf16] 185/186 language_model.model.layers.0.linear_attn.in_proj_z  4b=1.229e-02  8b=2.261e-03
+  [exact/bf16] 186/186 language_model.model.layers.0.linear_attn.in_proj_qkv  4b=1.112e-02  8b=2.277e-03
+  [exact] done in 1253.2s
+
+  Top 20 most-sensitive layers at 4-bit:
+      1. language_model.model.layers.0.linear_attn.out_proj            sens=5.281e-02  params=2,097,152
+      2. language_model.model.layers.1.linear_attn.out_proj            sens=1.692e-02  params=2,097,152
+      3. language_model.model.layers.2.linear_attn.out_proj            sens=1.558e-02  params=2,097,152
+      4. language_model.model.layers.7.self_attn.o_proj                sens=1.444e-02  params=2,097,152
+      5. language_model.model.layers.0.linear_attn.in_proj_z           sens=1.229e-02  params=2,097,152
+      6. language_model.model.layers.3.self_attn.o_proj                sens=1.214e-02  params=2,097,152
+      7. language_model.model.layers.0.linear_attn.in_proj_qkv         sens=1.112e-02  params=6,291,456
+      8. language_model.model.layers.5.linear_attn.out_proj            sens=1.077e-02  params=2,097,152
+      9. language_model.model.layers.0.mlp.up_proj                     sens=9.780e-03  params=3,670,016
+     10. language_model.model.layers.4.linear_attn.out_proj            sens=9.261e-03  params=2,097,152
+     11. language_model.model.layers.2.mlp.up_proj                     sens=8.863e-03  params=3,670,016
+     12. language_model.model.layers.11.self_attn.o_proj               sens=8.728e-03  params=2,097,152
+     13. language_model.model.layers.0.mlp.down_proj                   sens=8.360e-03  params=3,670,016
+     14. language_model.model.layers.5.mlp.down_proj                   sens=8.306e-03  params=3,670,016
+     15. language_model.model.layers.1.linear_attn.in_proj_qkv         sens=8.305e-03  params=6,291,456
+     16. language_model.model.layers.6.linear_attn.in_proj_qkv         sens=8.076e-03  params=6,291,456
+     17. language_model.model.layers.2.mlp.down_proj                   sens=8.064e-03  params=3,670,016
+     18. language_model.model.layers.4.mlp.up_proj                     sens=8.022e-03  params=3,670,016
+     19. language_model.model.layers.6.linear_attn.out_proj            sens=8.005e-03  params=2,097,152
+     20. language_model.model.layers.2.linear_attn.in_proj_qkv         sens=7.925e-03  params=6,291,456
+
+  Top 20 most-sensitive layers at 8-bit:
+      1. language_model.model.layers.0.linear_attn.out_proj            sens=2.946e-03  params=2,097,152
+      2. language_model.model.layers.2.linear_attn.in_proj_qkv         sens=2.411e-03  params=6,291,456
+      3. language_model.model.layers.1.linear_attn.out_proj            sens=2.338e-03  params=2,097,152
+      4. language_model.model.layers.1.mlp.gate_proj                   sens=2.292e-03  params=3,670,016
+      5. language_model.model.layers.1.linear_attn.in_proj_qkv         sens=2.281e-03  params=6,291,456
+      6. language_model.model.layers.0.linear_attn.in_proj_qkv         sens=2.277e-03  params=6,291,456
+      7. language_model.model.layers.0.linear_attn.in_proj_z           sens=2.261e-03  params=2,097,152
+      8. language_model.model.layers.0.mlp.down_proj                   sens=2.259e-03  params=3,670,016
+      9. language_model.model.layers.0.mlp.up_proj                     sens=2.259e-03  params=3,670,016
+     10. language_model.model.layers.0.mlp.gate_proj                   sens=2.250e-03  params=3,670,016
+     11. language_model.model.layers.0.linear_attn.in_proj_b           sens=2.250e-03  params=16,384
+     12. language_model.model.layers.1.mlp.down_proj                   sens=2.227e-03  params=3,670,016
+     13. language_model.model.layers.1.linear_attn.in_proj_z           sens=2.100e-03  params=2,097,152
+     14. language_model.model.layers.2.mlp.down_proj                   sens=2.087e-03  params=3,670,016
+     15. language_model.model.layers.2.mlp.up_proj                     sens=2.070e-03  params=3,670,016
+     16. language_model.model.layers.1.linear_attn.in_proj_a           sens=2.066e-03  params=16,384
+     17. language_model.model.layers.2.linear_attn.out_proj            sens=2.053e-03  params=2,097,152
+     18. language_model.model.layers.2.linear_attn.in_proj_z           sens=2.052e-03  params=2,097,152
+     19. language_model.model.layers.0.linear_attn.in_proj_a           sens=2.047e-03  params=16,384
+     20. language_model.model.layers.3.self_attn.v_proj                sens=2.001e-03  params=524,288
+
+[3/4] Optimizing multi-tier bit allocation...
+  Optimization result: 130 @ 4-bit, 56 @ 8-bit
+  Target BPW: 5.00, Achieved BPW: 5.59
+  Estimated model size: 331.8 MB
+  Block-aware constraints: floor=48 pre-upgrades, run-guard=8 post-fixes
+  NOTE: achieved 5.59 bpw against a target of 5.00 (+12%). The block-aware floor and run guard take precedence over the budget so no stretch of blocks is left wholly at 4-bit. Lower --n-floor-per-block (currently 2) to trade that protection for size.
+
+[4/4] Converting to MLX...
+  Converting Qwen3.5-0.8B-bf16 → Qwen3.5-0.8B-OptiQ-4bit/optiq_mixed
+  Quantization: mixed-precision (OptiQ)
+  [lowbit] range search on for affine layers at <=3 bits (4-bit keeps stock min/max)
+[INFO] Loading
+[INFO] Using dtype: bfloat16
+[INFO] Quantizing
+[INFO] Quantized model with 6.913 bits per weight.
+  [mtp] Found 15 MTP tensors in source across 1 shard(s).
+  [mtp] Fetching shards + extracting MTP tensors...
+  [mtp] Extracted 15 tensors, 20,452,864 params.
+  [mtp] Quantizing projections at 4-bit (group_size=64); norms + mtp.fc.weight stay at BF16.
+  [mtp] Wrote optiq/mtp.safetensors (13.9 MB).
+  [mtp] Registered sidecar in config.json: ['mtp_file', 'mtp_tensor_count', 'mtp_policy', 'mtplx_mtp_quantization', 'mtp_num_hidden_layers']
+  [gen_config] restored from source: do_sample, min_p, presence_penalty, repetition_penalty, temperature, top_k, top_p
+  Saved optimization metadata to Qwen3.5-0.8B-OptiQ-4bit/optiq_mixed/optiq/metadata.json
+  Output model size: 620.1 MB
+  [sidecar] vision: 153 tensors, 201 MB bfloat16
+  Converting Qwen3.5-0.8B-bf16 → Qwen3.5-0.8B-OptiQ-4bit/uniform_4bit
+  Quantization: uniform 4-bit
+  [lowbit] range search on for affine layers at <=3 bits (4-bit keeps stock min/max)
+[INFO] Loading
+[INFO] Using dtype: bfloat16
+[INFO] Quantizing
+[INFO] Quantized model with 4.508 bits per weight.
+  [mtp] Found 15 MTP tensors in source across 1 shard(s).
+  [mtp] Fetching shards + extracting MTP tensors...
+  [mtp] Extracted 15 tensors, 20,452,864 params.
+  [mtp] Quantizing projections at 4-bit (group_size=64); norms + mtp.fc.weight stay at BF16.
+  [mtp] Wrote optiq/mtp.safetensors (13.9 MB).
+  [mtp] Registered sidecar in config.json: ['mtp_file', 'mtp_tensor_count', 'mtp_policy', 'mtplx_mtp_quantization', 'mtp_num_hidden_layers']
+  [gen_config] restored from source: do_sample, min_p, presence_penalty, repetition_penalty, temperature, top_k, top_p
+  Output model size: 404.4 MB
+  Converting Qwen3.5-0.8B-bf16 → Qwen3.5-0.8B-OptiQ-4bit/static_mixed (static recipe: mixed_3_6)
+[INFO] Loading
+[INFO] Using dtype: bfloat16
+[INFO] Quantizing
+[INFO] Quantized model with 3.688 bits per weight.
+  [mtp] Found 15 MTP tensors in source across 1 shard(s).
+  [mtp] Fetching shards + extracting MTP tensors...
+  [mtp] Extracted 15 tensors, 20,452,864 params.
+  [mtp] Quantizing projections at 4-bit (group_size=64); norms + mtp.fc.weight stay at BF16.
+  [mtp] Wrote optiq/mtp.safetensors (13.9 MB).
+  [mtp] Registered sidecar in config.json: ['mtp_file', 'mtp_tensor_count', 'mtp_policy', 'mtplx_mtp_quantization', 'mtp_num_hidden_layers']
+  Output model size: 330.9 MB
+
+Done! OptiQ model saved to: Qwen3.5-0.8B-OptiQ-4bit/optiq_mixed
+[guard] {'peak_footprint_gb': 11.0, 'swap_growth_gb': -0.016} MLX peak GB 9.82

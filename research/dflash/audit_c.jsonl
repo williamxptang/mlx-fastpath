@@ -1,0 +1,8 @@
+{"method": "AR", "prompt": "code_edit", "tokens": 616, "parses": true, "both_edits": true, "equals_expected_file": true, "same_as_AR": true, "common_prefix_with_AR": 2190, "chars": 2190}
+{"method": "AR", "prompt": "copy_table", "tokens": 393, "table_exact": true, "same_as_AR": true, "common_prefix_with_AR": 744, "chars": 744}
+{"method": "A", "prompt": "code_edit", "tokens": 616, "parses": true, "both_edits": true, "equals_expected_file": true, "same_as_AR": true, "common_prefix_with_AR": 2190, "chars": 2190}
+{"method": "A", "prompt": "copy_table", "tokens": 393, "table_exact": true, "same_as_AR": true, "common_prefix_with_AR": 744, "chars": 744}
+{"method": "D2-w4", "prompt": "code_edit", "tokens": 617, "parses": true, "both_edits": true, "equals_expected_file": true, "same_as_AR": false, "common_prefix_with_AR": 2190, "chars": 2191}
+{"method": "D2-w4", "prompt": "copy_table", "tokens": 398, "table_exact": true, "same_as_AR": false, "common_prefix_with_AR": 705, "chars": 766}
+{"method": "N+", "prompt": "code_edit", "tokens": 615, "parses": true, "both_edits": true, "equals_expected_file": true, "same_as_AR": false, "common_prefix_with_AR": 2180, "chars": 2180}
+{"method": "N+", "prompt": "copy_table", "tokens": 392, "table_exact": true, "same_as_AR": false, "common_prefix_with_AR": 734, "chars": 734}

@@ -1,0 +1,10 @@
+loaded, footprint peak so far 8.51 has_mtp True
+{"prompt_tokens": 32, "output": "AR", "tok_s": 17.36, "tokens": 160, "teacher_forced_argmax_agreement": 0.9875, "mean_nll": 0.247, "peak_footprint_gb": 8.51}
+{"prompt_tokens": 32, "output": "MTP2+cap+vocab32k", "tok_s": 29.86, "tokens": 160, "teacher_forced_argmax_agreement": 0.9938, "mean_nll": 0.2543, "peak_footprint_gb": 8.51}
+{"prompt_tokens": 32, "first_differing_token": 62, "ar_text_at_split": " the speed gap between the extremely fast processor and the relatively slow main memory", "mtp_text_at_split": " the speed gap between the extremely fast processor cores and the relatively slow main"}
+{"prompt_tokens": 4031, "output": "AR", "tok_s": 17.09, "tokens": 160, "teacher_forced_argmax_agreement": 0.9938, "mean_nll": 0.2597, "peak_footprint_gb": 8.66}
+{"prompt_tokens": 4031, "output": "MTP2+cap+vocab32k", "tok_s": 24.63, "tokens": 160, "teacher_forced_argmax_agreement": 0.9875, "mean_nll": 0.2499, "peak_footprint_gb": 8.66}
+{"prompt_tokens": 4031, "first_differing_token": 8, "ar_text_at_split": "Based on the research handoff and document analysis provided, here are the", "mtp_text_at_split": "Based on the research handoff and document content provided, here are the"}
+{"prompt_tokens": 8031, "output": "AR", "tok_s": 16.81, "tokens": 160, "teacher_forced_argmax_agreement": 0.9875, "mean_nll": 0.2185, "peak_footprint_gb": 8.77}
+{"prompt_tokens": 8031, "output": "MTP2+cap+vocab32k", "tok_s": 25.36, "tokens": 160, "teacher_forced_argmax_agreement": 1.0, "mean_nll": 0.2551, "peak_footprint_gb": 8.77}
+{"prompt_tokens": 8031, "first_differing_token": 27, "ar_text_at_split": "1.  **Hardware Architecture (Apple Silicon M5):**\n   ", "mtp_text_at_split": "1.  **Hardware Architecture (Apple M5/Neural Acceler"}

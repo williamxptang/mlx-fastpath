@@ -1,0 +1,33 @@
+Traceback (most recent call last):
+  File "<repo>/research/dflash/dflash_child.py", line 26, in <module>
+    b = load_runtime_bundle(model_ref=TARGET, draft_ref=DRAFT, draft_quant=None if dq == "none" else dq,
+                            verify_config=ctx.verify)
+  File "<venv>/lib/python3.13/site-packages/dflash_mlx/runtime/bundle.py", line 86, in load_runtime_bundle
+    draft_model, draft_meta = load_draft_bundle(
+                              ~~~~~~~~~~~~~~~~~^
+        resolved_draft_ref,
+        ^^^^^^^^^^^^^^^^^^^
+        lazy=lazy,
+        ^^^^^^^^^^
+        draft_quant=effective_draft_quant,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "<venv>/lib/python3.13/site-packages/dflash_mlx/runtime/loading.py", line 242, in load_draft_bundle
+    model, config = load_model(
+                    ~~~~~~~~~~^
+        model_path,
+        ^^^^^^^^^^^
+        lazy=lazy,
+        ^^^^^^^^^^
+        get_model_classes=_get_dflash_model_classes,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "<venv>/lib/python3.13/site-packages/mlx_lm/utils.py", line 341, in load_model
+    model_args = model_args_class.from_dict(config)
+  File "<venv>/lib/python3.13/site-packages/dflash_mlx/model.py", line 267, in from_dict
+    return cls(
+        **{key: value for key, value in data.items() if key in cls.__annotations__}
+    )
+TypeError: DFlashDraftModelArgs.__init__() missing 2 required positional arguments: 'rope_theta' and 'block_size'

@@ -1,0 +1,126 @@
+20:13:41 AB start: 62 jobs, chain cap 180 min
+20:13:41 START q08-bf16-stock-0: free 11.2 GB, cap 10.2 GB, expected peak 3.0 GB, swap 1.62 GB (may grow 1.38)
+20:14:13 END q08-bf16-stock-0: ok, 5 rows, 32s, peak 2.1 GB, swap growth 0.0 GB
+20:14:13 START q08-bf16-fast-ar-0: free 11.3 GB, cap 10.3 GB, expected peak 3.0 GB, swap 1.62 GB (may grow 1.38)
+20:14:43 END q08-bf16-fast-ar-0: ok, 5 rows, 31s, peak 2.89 GB, swap growth 0.0 GB
+20:14:43 START q08-int4-stock-0: free 11.2 GB, cap 10.2 GB, expected peak 2.0 GB, swap 1.62 GB (may grow 1.38)
+20:15:10 END q08-int4-stock-0: ok, 5 rows, 27s, peak 2.32 GB, swap growth 0.0 GB
+20:15:10 START q08-int4-optiq-mtp-0: free 11.2 GB, cap 10.2 GB, expected peak 2.0 GB, swap 1.62 GB (may grow 1.38)
+20:15:44 END q08-int4-optiq-mtp-0: ok, 5 rows, 34s, peak 1.79 GB, swap growth -0.008 GB
+20:15:44 START q08-int4-fast-ar-0: free 10.6 GB, cap 9.6 GB, expected peak 2.0 GB, swap 1.61 GB (may grow 1.39)
+20:16:08 END q08-int4-fast-ar-0: ok, 5 rows, 24s, peak 1.43 GB, swap growth 0.0 GB
+20:16:08 START q08-int4-fast-mtp-0: free 10.7 GB, cap 9.7 GB, expected peak 2.0 GB, swap 1.61 GB (may grow 1.39)
+20:16:36 END q08-int4-fast-mtp-0: ok, 5 rows, 28s, peak 2.21 GB, swap growth 0.0 GB
+20:16:36 START q08-int4-fast-ngram-0: free 10.8 GB, cap 9.8 GB, expected peak 2.0 GB, swap 1.61 GB (may grow 1.39)
+20:17:01 END q08-int4-fast-ngram-0: ok, 5 rows, 25s, peak 1.74 GB, swap growth 0.0 GB
+20:17:01 START q08-optiq-stock-0: free 10.8 GB, cap 9.8 GB, expected peak 2.3 GB, swap 1.61 GB (may grow 1.39)
+20:17:29 END q08-optiq-stock-0: ok, 5 rows, 28s, peak 1.44 GB, swap growth 0.0 GB
+20:17:29 START q08-optiq-optiq-mtp-0: free 10.9 GB, cap 9.9 GB, expected peak 2.3 GB, swap 1.61 GB (may grow 1.39)
+20:18:06 END q08-optiq-optiq-mtp-0: ok, 5 rows, 36s, peak 2.31 GB, swap growth -0.047 GB
+20:18:06 START q08-optiq-fast-ar-0: free 10.7 GB, cap 9.7 GB, expected peak 2.3 GB, swap 1.56 GB (may grow 1.44)
+20:18:30 END q08-optiq-fast-ar-0: ok, 5 rows, 25s, peak 2.35 GB, swap growth 0.0 GB
+20:18:30 START q08-optiq-fast-mtp-0: free 10.8 GB, cap 9.8 GB, expected peak 2.3 GB, swap 1.56 GB (may grow 1.44)
+20:18:58 END q08-optiq-fast-mtp-0: ok, 5 rows, 27s, peak 2.21 GB, swap growth 0.0 GB
+20:18:58 START q08-optiq-fast-ngram-0: free 10.8 GB, cap 9.8 GB, expected peak 2.3 GB, swap 1.56 GB (may grow 1.44)
+20:19:26 END q08-optiq-fast-ngram-0: ok, 5 rows, 28s, peak 1.78 GB, swap growth 0.0 GB
+20:19:26 START q08-optiq-n2-fast-mtp-0: free 10.9 GB, cap 9.9 GB, expected peak 2.2 GB, swap 1.56 GB (may grow 1.44)
+20:19:54 END q08-optiq-n2-fast-mtp-0: ok, 5 rows, 29s, peak 1.61 GB, swap growth 0.0 GB
+20:19:54 START q08-optiq-n2-fast-mtp-1: free 10.8 GB, cap 9.8 GB, expected peak 2.2 GB, swap 1.56 GB (may grow 1.44)
+20:20:22 END q08-optiq-n2-fast-mtp-1: ok, 5 rows, 28s, peak 2.23 GB, swap growth 0.0 GB
+20:20:22 START q08-optiq-fast-ngram-1: free 10.8 GB, cap 9.8 GB, expected peak 2.3 GB, swap 1.56 GB (may grow 1.44)
+20:20:49 END q08-optiq-fast-ngram-1: ok, 5 rows, 27s, peak 2.29 GB, swap growth 0.0 GB
+20:20:49 START q08-optiq-fast-mtp-1: free 10.9 GB, cap 9.9 GB, expected peak 2.3 GB, swap 1.56 GB (may grow 1.44)
+20:21:17 END q08-optiq-fast-mtp-1: ok, 5 rows, 28s, peak 2.42 GB, swap growth 0.0 GB
+20:21:17 START q08-optiq-fast-ar-1: free 10.9 GB, cap 9.9 GB, expected peak 2.3 GB, swap 1.56 GB (may grow 1.44)
+20:21:42 END q08-optiq-fast-ar-1: ok, 5 rows, 26s, peak 1.64 GB, swap growth 0.0 GB
+20:21:42 START q08-optiq-optiq-mtp-1: free 11.1 GB, cap 10.1 GB, expected peak 2.3 GB, swap 1.56 GB (may grow 1.44)
+20:22:16 END q08-optiq-optiq-mtp-1: ok, 5 rows, 33s, peak 1.95 GB, swap growth -0.008 GB
+20:22:16 START q08-optiq-stock-1: free 11.0 GB, cap 10.0 GB, expected peak 2.3 GB, swap 1.56 GB (may grow 1.44)
+20:22:39 END q08-optiq-stock-1: ok, 5 rows, 24s, peak 2.48 GB, swap growth 0.0 GB
+20:22:39 START q08-int4-fast-ngram-1: free 11.0 GB, cap 10.0 GB, expected peak 2.0 GB, swap 1.56 GB (may grow 1.44)
+20:23:06 END q08-int4-fast-ngram-1: ok, 5 rows, 27s, peak 1.7 GB, swap growth 0.0 GB
+20:23:06 START q08-int4-fast-mtp-1: free 10.9 GB, cap 9.9 GB, expected peak 2.0 GB, swap 1.56 GB (may grow 1.44)
+20:23:33 END q08-int4-fast-mtp-1: ok, 5 rows, 27s, peak 2.14 GB, swap growth -0.008 GB
+20:23:33 START q08-int4-fast-ar-1: free 10.9 GB, cap 9.9 GB, expected peak 2.0 GB, swap 1.55 GB (may grow 1.45)
+20:23:57 END q08-int4-fast-ar-1: ok, 5 rows, 24s, peak 2.25 GB, swap growth 0.0 GB
+20:23:57 START q08-int4-optiq-mtp-1: free 10.8 GB, cap 9.8 GB, expected peak 2.0 GB, swap 1.55 GB (may grow 1.45)
+20:24:34 END q08-int4-optiq-mtp-1: ok, 5 rows, 37s, peak 1.72 GB, swap growth 0.0 GB
+20:24:34 START q08-int4-stock-1: free 10.9 GB, cap 9.9 GB, expected peak 2.0 GB, swap 1.55 GB (may grow 1.45)
+20:25:00 END q08-int4-stock-1: ok, 5 rows, 26s, peak 1.22 GB, swap growth 0.0 GB
+20:25:00 START q08-bf16-fast-ar-1: free 10.9 GB, cap 9.9 GB, expected peak 3.0 GB, swap 1.55 GB (may grow 1.45)
+20:25:31 END q08-bf16-fast-ar-1: ok, 5 rows, 31s, peak 2.33 GB, swap growth 0.0 GB
+20:25:31 START q08-bf16-stock-1: free 11.1 GB, cap 10.1 GB, expected peak 3.0 GB, swap 1.55 GB (may grow 1.45)
+20:26:01 END q08-bf16-stock-1: ok, 5 rows, 30s, peak 3.14 GB, swap growth 0.0 GB
+20:26:01 START q2b-bf16-stock-0: free 11.1 GB, cap 10.1 GB, expected peak 5.8 GB, swap 1.55 GB (may grow 1.45)
+20:26:59 END q2b-bf16-stock-0: ok, 5 rows, 57s, peak 5.05 GB, swap growth -0.008 GB
+20:26:59 START q2b-bf16-fast-ar-0: free 12.2 GB, cap 11.2 GB, expected peak 5.8 GB, swap 1.54 GB (may grow 1.46)
+20:27:54 END q2b-bf16-fast-ar-0: ok, 5 rows, 56s, peak 5.1 GB, swap growth 0.0 GB
+20:27:54 START q2b-int4-stock-0: free 12.1 GB, cap 11.1 GB, expected peak 3.0 GB, swap 1.54 GB (may grow 1.46)
+20:28:23 END q2b-int4-stock-0: ok, 5 rows, 28s, peak 2.85 GB, swap growth 0.0 GB
+20:28:23 START q2b-int4-optiq-mtp-0: free 12.2 GB, cap 11.2 GB, expected peak 3.0 GB, swap 1.54 GB (may grow 1.46)
+20:28:57 END q2b-int4-optiq-mtp-0: ok, 5 rows, 34s, peak 2.65 GB, swap growth 0.0 GB
+20:28:57 START q2b-int4-fast-ar-0: free 11.9 GB, cap 10.9 GB, expected peak 3.0 GB, swap 1.54 GB (may grow 1.46)
+20:29:25 END q2b-int4-fast-ar-0: ok, 5 rows, 28s, peak 2.25 GB, swap growth 0.0 GB
+20:29:25 START q2b-int4-fast-mtp-0: free 12.0 GB, cap 11.0 GB, expected peak 3.0 GB, swap 1.54 GB (may grow 1.46)
+20:29:54 END q2b-int4-fast-mtp-0: ok, 5 rows, 29s, peak 2.66 GB, swap growth 0.0 GB
+20:29:54 START q2b-int4-fast-ngram-0: free 11.2 GB, cap 10.2 GB, expected peak 3.0 GB, swap 1.54 GB (may grow 1.46)
+20:30:23 END q2b-int4-fast-ngram-0: ok, 5 rows, 29s, peak 3.06 GB, swap growth 0.0 GB
+20:30:23 START q2b-optiq-stock-0: free 11.4 GB, cap 10.4 GB, expected peak 3.3 GB, swap 1.54 GB (may grow 1.46)
+20:30:57 END q2b-optiq-stock-0: ok, 5 rows, 35s, peak 3.1 GB, swap growth 0.0 GB
+20:30:57 START q2b-optiq-optiq-mtp-0: free 11.4 GB, cap 10.4 GB, expected peak 3.3 GB, swap 1.54 GB (may grow 1.46)
+20:31:36 END q2b-optiq-optiq-mtp-0: ok, 5 rows, 39s, peak 3.04 GB, swap growth -0.008 GB
+20:31:36 START q2b-optiq-fast-ar-0: free 12.0 GB, cap 11.0 GB, expected peak 3.3 GB, swap 1.53 GB (may grow 1.47)
+20:32:04 END q2b-optiq-fast-ar-0: ok, 5 rows, 28s, peak 2.88 GB, swap growth 0.0 GB
+20:32:04 START q2b-optiq-fast-mtp-0: free 12.1 GB, cap 11.1 GB, expected peak 3.3 GB, swap 1.53 GB (may grow 1.47)
+20:32:29 END q2b-optiq-fast-mtp-0: ok, 5 rows, 25s, peak 2.92 GB, swap growth 0.0 GB
+20:32:29 START q2b-optiq-fast-ngram-0: free 12.0 GB, cap 11.0 GB, expected peak 3.3 GB, swap 1.53 GB (may grow 1.47)
+20:32:55 END q2b-optiq-fast-ngram-0: ok, 5 rows, 26s, peak 3.26 GB, swap growth 0.0 GB
+20:32:55 START q2b-optiq-fast-ngram-1: free 11.9 GB, cap 10.9 GB, expected peak 3.3 GB, swap 1.53 GB (may grow 1.47)
+20:33:21 END q2b-optiq-fast-ngram-1: ok, 5 rows, 26s, peak 3.12 GB, swap growth 0.0 GB
+20:33:21 START q2b-optiq-fast-mtp-1: free 11.6 GB, cap 10.6 GB, expected peak 3.3 GB, swap 1.53 GB (may grow 1.47)
+20:33:50 END q2b-optiq-fast-mtp-1: ok, 5 rows, 30s, peak 3.02 GB, swap growth 0.0 GB
+20:33:50 START q2b-optiq-fast-ar-1: free 11.6 GB, cap 10.6 GB, expected peak 3.3 GB, swap 1.53 GB (may grow 1.47)
+20:34:21 END q2b-optiq-fast-ar-1: ok, 5 rows, 31s, peak 3.0 GB, swap growth 0.0 GB
+20:34:21 START q2b-optiq-optiq-mtp-1: free 11.6 GB, cap 10.6 GB, expected peak 3.3 GB, swap 1.53 GB (may grow 1.47)
+20:34:59 END q2b-optiq-optiq-mtp-1: ok, 5 rows, 38s, peak 3.21 GB, swap growth 0.0 GB
+20:34:59 START q2b-optiq-stock-1: free 11.6 GB, cap 10.6 GB, expected peak 3.3 GB, swap 1.53 GB (may grow 1.47)
+20:35:30 END q2b-optiq-stock-1: ok, 5 rows, 31s, peak 2.76 GB, swap growth 0.0 GB
+20:35:30 START q2b-int4-fast-ngram-1: free 11.5 GB, cap 10.6 GB, expected peak 3.0 GB, swap 1.53 GB (may grow 1.47)
+20:36:03 END q2b-int4-fast-ngram-1: ok, 5 rows, 33s, peak 2.71 GB, swap growth 0.0 GB
+20:36:03 START q2b-int4-fast-mtp-1: free 11.6 GB, cap 10.6 GB, expected peak 3.0 GB, swap 1.53 GB (may grow 1.47)
+20:36:36 END q2b-int4-fast-mtp-1: ok, 5 rows, 32s, peak 2.51 GB, swap growth 0.0 GB
+20:36:36 START q2b-int4-fast-ar-1: free 11.6 GB, cap 10.6 GB, expected peak 3.0 GB, swap 1.53 GB (may grow 1.47)
+20:37:07 END q2b-int4-fast-ar-1: ok, 5 rows, 32s, peak 2.76 GB, swap growth 0.0 GB
+20:37:07 START q2b-int4-optiq-mtp-1: free 11.6 GB, cap 10.6 GB, expected peak 3.0 GB, swap 1.53 GB (may grow 1.47)
+20:37:48 END q2b-int4-optiq-mtp-1: ok, 5 rows, 40s, peak 2.84 GB, swap growth 0.0 GB
+20:37:48 START q2b-int4-stock-1: free 11.5 GB, cap 10.5 GB, expected peak 3.0 GB, swap 1.53 GB (may grow 1.47)
+20:38:18 END q2b-int4-stock-1: ok, 5 rows, 31s, peak 2.6 GB, swap growth 0.0 GB
+20:38:18 START q2b-bf16-fast-ar-1: free 11.5 GB, cap 10.5 GB, expected peak 5.8 GB, swap 1.53 GB (may grow 1.47)
+20:39:17 END q2b-bf16-fast-ar-1: ok, 5 rows, 59s, peak 5.06 GB, swap growth 0.0 GB
+20:39:17 START q2b-bf16-stock-1: free 11.8 GB, cap 10.8 GB, expected peak 5.8 GB, swap 1.53 GB (may grow 1.47)
+20:40:16 END q2b-bf16-stock-1: ok, 5 rows, 59s, peak 5.12 GB, swap growth 0.0 GB
+20:40:16 START gemma-bf16-stock-0: free 12.0 GB, cap 11.0 GB, expected peak 10.5 GB, swap 1.53 GB (may grow 1.47)
+20:41:34 END gemma-bf16-stock-0: ok, 5 rows, 78s, peak 10.0 GB, swap growth 0.0 GB
+20:41:34 START gemma-bf16-fast-ar-0: free 14.3 GB, cap 13.3 GB, expected peak 10.5 GB, swap 1.53 GB (may grow 1.47)
+20:42:46 END gemma-bf16-fast-ar-0: ok, 5 rows, 72s, peak 9.61 GB, swap growth 0.0 GB
+20:42:46 START gemma-int4-stock-0: free 14.2 GB, cap 13.2 GB, expected peak 4.0 GB, swap 1.53 GB (may grow 1.47)
+20:43:25 END gemma-int4-stock-0: ok, 5 rows, 39s, peak 3.83 GB, swap growth 0.0 GB
+20:43:25 START gemma-int4-fast-ar-0: free 14.2 GB, cap 13.2 GB, expected peak 4.0 GB, swap 1.53 GB (may grow 1.47)
+20:44:04 END gemma-int4-fast-ar-0: ok, 5 rows, 39s, peak 3.42 GB, swap growth 0.0 GB
+20:44:04 START gemma-optiq-stock-0: free 14.1 GB, cap 13.1 GB, expected peak 5.6 GB, swap 1.53 GB (may grow 1.47)
+20:44:45 END gemma-optiq-stock-0: ok, 5 rows, 41s, peak 5.17 GB, swap growth 0.0 GB
+20:44:45 START gemma-optiq-fast-ar-0: free 14.1 GB, cap 13.1 GB, expected peak 5.6 GB, swap 1.53 GB (may grow 1.47)
+20:45:25 END gemma-optiq-fast-ar-0: ok, 5 rows, 41s, peak 4.92 GB, swap growth 0.0 GB
+20:45:25 START gemma-optiq-fast-ar-1: free 14.1 GB, cap 13.1 GB, expected peak 5.6 GB, swap 1.53 GB (may grow 1.47)
+20:46:07 END gemma-optiq-fast-ar-1: ok, 5 rows, 41s, peak 4.98 GB, swap growth 0.0 GB
+20:46:07 START gemma-optiq-stock-1: free 12.9 GB, cap 11.9 GB, expected peak 5.6 GB, swap 1.53 GB (may grow 1.47)
+20:46:46 END gemma-optiq-stock-1: ok, 5 rows, 40s, peak 4.74 GB, swap growth 0.0 GB
+20:46:46 START gemma-int4-fast-ar-1: free 13.1 GB, cap 12.1 GB, expected peak 4.0 GB, swap 1.53 GB (may grow 1.47)
+20:47:22 END gemma-int4-fast-ar-1: ok, 5 rows, 36s, peak 3.93 GB, swap growth 0.0 GB
+20:47:22 START gemma-int4-stock-1: free 13.3 GB, cap 12.3 GB, expected peak 4.0 GB, swap 1.53 GB (may grow 1.47)
+20:47:59 END gemma-int4-stock-1: ok, 5 rows, 37s, peak 3.53 GB, swap growth 0.0 GB
+20:47:59 START gemma-bf16-fast-ar-1: free 13.3 GB, cap 12.3 GB, expected peak 10.5 GB, swap 1.53 GB (may grow 1.47)
+20:49:14 END gemma-bf16-fast-ar-1: ok, 5 rows, 75s, peak 9.62 GB, swap growth -0.008 GB
+20:49:14 START gemma-bf16-stock-1: free 14.3 GB, cap 13.3 GB, expected peak 10.5 GB, swap 1.52 GB (may grow 1.48)
+20:50:30 END gemma-bf16-stock-1: ok, 5 rows, 76s, peak 9.62 GB, swap growth 0.0 GB
+20:50:30 AB done in 36.8 min: ok x62

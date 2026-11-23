@@ -1,0 +1,14 @@
+20:10:27 AB start: 6 jobs, chain cap 180 min
+20:10:27 START q08-optiq-stock-0: free 12.3 GB, cap 11.3 GB, expected peak 2.3 GB, swap 1.67 GB (may grow 1.33)
+20:10:53 END q08-optiq-stock-0: ok, 5 rows, 26s, peak 1.44 GB, swap growth 0.0 GB
+20:10:53 START q08-optiq-optiq-mtp-0: free 11.8 GB, cap 10.8 GB, expected peak 2.3 GB, swap 1.67 GB (may grow 1.33)
+20:11:31 END q08-optiq-optiq-mtp-0: ok, 5 rows, 38s, peak 1.92 GB, swap growth 0.0 GB
+20:11:31 START q08-optiq-fast-ar-0: free 11.3 GB, cap 10.3 GB, expected peak 2.3 GB, swap 1.67 GB (may grow 1.33)
+20:11:57 END q08-optiq-fast-ar-0: ok, 5 rows, 26s, peak 2.3 GB, swap growth 0.0 GB
+20:11:57 START q08-optiq-fast-mtp-0: free 11.3 GB, cap 10.3 GB, expected peak 2.3 GB, swap 1.67 GB (may grow 1.33)
+20:12:25 END q08-optiq-fast-mtp-0: ok, 5 rows, 28s, peak 1.99 GB, swap growth 0.0 GB
+20:12:25 START q08-optiq-fast-ngram-0: free 11.3 GB, cap 10.3 GB, expected peak 2.3 GB, swap 1.67 GB (may grow 1.33)
+20:12:51 END q08-optiq-fast-ngram-0: ok, 5 rows, 26s, peak 1.87 GB, swap growth 0.0 GB
+20:12:51 START q08-optiq-n2-fast-mtp-0: free 11.2 GB, cap 10.2 GB, expected peak 2.2 GB, swap 1.66 GB (may grow 1.34)
+20:13:18 END q08-optiq-n2-fast-mtp-0: ok, 5 rows, 27s, peak 1.67 GB, swap growth -0.047 GB
+20:13:18 AB done in 2.9 min: ok x6

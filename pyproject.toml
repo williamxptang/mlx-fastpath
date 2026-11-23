@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlx-fastpath"
+dynamic = ["version"]
+description = "Measured, audited runtime speedups for MLX / mlx-lm / mlx-optiq on Apple Silicon"
+requires-python = ">=3.12"
+dependencies = []   # uses the mlx, mlx-lm, mlx-optiq already in the env; versions checked at apply()
+
+[project.scripts]
+mlx-fastpath = "mlx_fastpath.cli:main"
+
+[tool.setuptools]
+packages = ["mlx_fastpath"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["slow: loads a real model (opt-in: MLX_FASTPATH_SLOW=1)"]
+addopts = "-m 'not slow'"

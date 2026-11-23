@@ -1,0 +1,74 @@
+start 18:21:18
+
+[lossless] width 3: drift 0.000
+[lossless] width 3: drift 0.000
+[lossless] width 3: drift 0.000.
+[lossless] width 9: drift 0.250, split at token 0, stock logit gap 1.750F
+[kv4] mean |err| vs exact: stock 0.1194, fast 0.1166; top-1 agreement: stock 0.976, fast 0.965; per prompt {'stock': [0.12185106426477432, 0.1286776214838028, 0.10780924558639526], 'fast': [0.12654754519462585, 0.11921092867851257, 0.1040145605802536]} {'stock': [0.9375, 1.0, 0.9895833730697632], 'fast': [0.9375, 0.9583333730697632, 1.0]}
+.
+=================================== FAILURES ===================================
+_____ test_speedups_keep_greedy_ngram_output_and_the_fold_stays_close[q08] _____
+
+mtp_engine = <optiq.runtime.engine.OptiqEngine object at 0x11dc45e80>
+attention_calls = {'folded_qsdpa': 0, 'folded_sdpa': 210, 'fused_qkv_sdpa': 0}
+
+    def test_speedups_keep_greedy_ngram_output_and_the_fold_stays_close(mtp_engine, attention_calls):
+        import mlx_fastpath as fp
+        ids = [_prompt_ids(mtp_engine, p) for p in PROMPTS]
+        fp.remove()
+        stock = [_ngram_from_clean_state(mtp_engine, x) for x in ids]
+        try:
+            assert fp.apply(), "apply() ran stock: installed versions differ from apply.TESTED"
+            fast = [_ngram_from_clean_state(mtp_engine, x) for x in ids]
+        finally:
+            fp.remove()
+>       _assert_same_or_near_tie(mtp_engine, ids, stock, fast, NGRAM_WIDTH)
+
+tests/test_lossless_slow.py:206: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+engine = <optiq.runtime.engine.OptiqEngine object at 0x11dc45e80>
+prompt_ids = [[248045, 846, 198, 814, 20139, 303, ...], [248045, 846, 198, 7734, 264, 12654, ...], [248045, 846, 198, 32, 5257, 10583, ...]]
+stock = [[16, 13, 561, 5839, 2781, 279, ...], [71093, 12305, 198, 727, 73111, 1393, ...], [1206, 1423, 279, 2984, 314, 279, ...]]
+fast = [[760, 12515, 7701, 6105, 4016, 310, ...], [71093, 12305, 198, 727, 73111, 1393, ...], [1206, 1423, 279, 2984, 314, 279, ...]]
+block = 9
+
+    def _assert_same_or_near_tie(engine, prompt_ids, stock, fast, block):
+        """stock / fast: generated token ids per prompt (EOS excluded)."""
+        eos = min(engine._eos_ids())                            # a set of ids; any one stands for "ended"
+        agreed = 0
+        for ids, s, f in zip(prompt_ids, stock, fast):
+            a, b = list(s) + [eos], list(f) + [eos]               # a text ends on EOS: one more position to score
+            ref = _logits_along(engine, ids, a, block=block, mode="stock")
+            drift = mx.abs(ref - _logits_along(engine, ids, a, block=block, mode="fast")).max().item()
+            print(f"\n[lossless] width {block}: drift {drift:.3f}", end="")
+            assert drift <= DRIFT_CEILING, f"speedups move logits by {drift:.3f} > {DRIFT_CEILING}"
+            if a == b:
+                agreed += len(a) - 1
+                continue
+            i = next(k for k, (x, y) in enumerate(zip(a, b)) if x != y)   # exists: they differ and both end on EOS
+            gap = abs((ref[i, a[i]] - ref[i, b[i]]).item())
+            print(f", split at token {i}, stock logit gap {gap:.3f}", end="")
+>           assert gap <= drift + SHAPE_SHIFT, f"split at token {i} with logit gap {gap:.3f} > drift {drift:.3f} + {SHAPE_SHIFT}"
+E           AssertionError: split at token 0 with logit gap 1.750 > drift 0.250 + 0.25
+E           assert 1.75 <= (0.25 + 0.25)
+
+tests/test_lossless_slow.py:149: AssertionError
+=============================== warnings summary ===============================
+tests/test_lossless_slow.py::test_speedups_keep_greedy_mtp_output_with_a_bf16_cache[q08]
+  <frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+
+tests/test_lossless_slow.py::test_speedups_keep_greedy_mtp_output_with_a_bf16_cache[q08]
+  <frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_lossless_slow.py::test_speedups_keep_greedy_mtp_output_with_a_bf16_cache[q08]
+PASSED tests/test_lossless_slow.py::test_speedups_are_no_less_accurate_than_stock_with_a_4bit_cache[q08]
+FAILED tests/test_lossless_slow.py::test_speedups_keep_greedy_ngram_output_and_the_fold_stays_close[q08]
+1 failed, 2 passed, 4 deselected, 2 warnings in 52.62s
+<sys>:0: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+exit=1
+end 18:22:14
+vm.swapusage: total = 3072.00M  used = 1840.75M  free = 1231.25M  (encrypted)

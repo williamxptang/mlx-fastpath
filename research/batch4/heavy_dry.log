@@ -1,0 +1,65 @@
+12:30:27 HEAVY DRY RUN start: 15 jobs, chain cap 90 min
+12:30:27 START H1-sustained: free 9.4 GB, cap 8.4 GB, expected peak 0.5 GB, swap 1.12 GB (may grow 1.88)
+12:30:28 END H1-sustained: ok, 2 rows, 1s, peak 0.1 GB, swap growth ? GB
+12:30:28 START H2-optiq-ar-0: free 9.4 GB, cap 8.4 GB, expected peak 0.5 GB, swap 1.12 GB (may grow 1.88)
+12:30:28 END H2-optiq-ar-0: ok, 2 rows, 1s, peak 0.1 GB, swap growth ? GB
+12:30:28 START H2-ar-n2off-1: free 9.4 GB, cap 8.4 GB, expected peak 0.5 GB, swap 1.12 GB (may grow 1.88)
+12:30:29 END H2-ar-n2off-1: ok, 2 rows, 1s, peak 0.1 GB, swap growth ? GB
+12:30:29 START H2-ar-n2on-2: free 9.5 GB, cap 8.5 GB, expected peak 0.5 GB, swap 1.12 GB (may grow 1.88)
+12:30:29 END H2-ar-n2on-2: exit 1, 0 rows, 0s, peak ? GB, swap growth ? GB | Traceback: stub failure on purpose
+12:30:29 START H2-A-n2off-3: free 9.4 GB, cap 8.4 GB, expected peak 0.5 GB, swap 1.12 GB (may grow 1.88)
+12:30:30 END H2-A-n2off-3: ok, 2 rows, 1s, peak 0.1 GB, swap growth ? GB
+12:30:30 START H2-A-n2on-4: free 9.3 GB, cap 8.3 GB, expected peak 0.5 GB, swap 1.12 GB (may grow 1.88)
+12:30:31 END H2-A-n2on-4: ok, 2 rows, 1s, peak 0.1 GB, swap growth ? GB
+12:30:31 START H2-A-idset-n2on-5: free 9.4 GB, cap 8.4 GB, expected peak 0.5 GB, swap 1.12 GB (may grow 1.88)
+12:30:31 END H2-A-idset-n2on-5: ok, 2 rows, 1s, peak 0.1 GB, swap growth ? GB
+12:30:31 START H2-A-idset-n2on-6: free 9.4 GB, cap 8.4 GB, expected peak 0.5 GB, swap 1.12 GB (may grow 1.88)
+12:30:32 END H2-A-idset-n2on-6: ok, 2 rows, 1s, peak 0.1 GB, swap growth ? GB
+12:30:32 START H2-A-n2on-7: free 9.4 GB, cap 8.4 GB, expected peak 0.5 GB, swap 1.12 GB (may grow 1.88)
+12:30:33 END H2-A-n2on-7: ok, 2 rows, 1s, peak 0.1 GB, swap growth ? GB
+12:30:33 START H2-A-n2off-8: free 9.4 GB, cap 8.4 GB, expected peak 0.5 GB, swap 1.12 GB (may grow 1.88)
+12:30:34 END H2-A-n2off-8: ok, 2 rows, 1s, peak 0.1 GB, swap growth ? GB
+12:30:34 START H2-ar-n2on-9: free 9.4 GB, cap 8.4 GB, expected peak 0.5 GB, swap 1.12 GB (may grow 1.88)
+12:30:34 END H2-ar-n2on-9: ok, 2 rows, 1s, peak 0.1 GB, swap growth ? GB
+12:30:34 START H2-ar-n2off-10: free 9.4 GB, cap 8.4 GB, expected peak 0.5 GB, swap 1.12 GB (may grow 1.88)
+12:30:35 END H2-ar-n2off-10: ok, 2 rows, 1s, peak 0.1 GB, swap growth ? GB
+12:30:35 START H2-optiq-ar-11: free 9.4 GB, cap 8.4 GB, expected peak 0.5 GB, swap 1.12 GB (may grow 1.88)
+12:30:35 END H2-optiq-ar-11: ok, 2 rows, 1s, peak 0.1 GB, swap growth ? GB
+12:30:35 START H3-slow-tests: free 9.5 GB, cap 8.5 GB, expected peak 0.5 GB, swap 1.12 GB (may grow 1.88)
+12:30:36 END H3-slow-tests: ok, 2 rows, 1s, peak 0.1 GB, swap growth ? GB
+12:30:36 NOT RUN H4-e9-prefill: condition false
+12:30:36 RETRY H2-ar-n2on-2 (first try: exit 1)
+12:30:36 START H2-ar-n2on-2: free 9.5 GB, cap 8.5 GB, expected peak 0.5 GB, swap 1.12 GB (may grow 1.88)
+12:30:37 END H2-ar-n2on-2: ok, 2 rows, 1s, peak 0.1 GB, swap growth ? GB
+12:30:37 HEAVY done in 0.2 min: not run (condition) x1, ok x13, ok (retry) x1
+08:22:32 HEAVY DRY RUN start: 15 jobs, chain cap 90 min
+08:22:32 START H1-sustained: free 8.2 GB, cap 7.2 GB, expected peak 0.5 GB, swap 1.19 GB (may grow 1.81)
+08:22:33 END H1-sustained: ok, 2 rows, 1s, peak 0.1 GB, swap growth 0.0 GB
+08:22:33 START H2-optiq-ar-0: free 8.2 GB, cap 7.2 GB, expected peak 0.5 GB, swap 1.19 GB (may grow 1.81)
+08:22:34 END H2-optiq-ar-0: ok, 2 rows, 1s, peak 0.1 GB, swap growth 0.0 GB
+08:22:34 START H2-ar-n2off-1: free 8.2 GB, cap 7.2 GB, expected peak 0.5 GB, swap 1.19 GB (may grow 1.81)
+08:22:35 END H2-ar-n2off-1: ok, 2 rows, 1s, peak 0.1 GB, swap growth 0.0 GB
+08:22:35 START H2-ar-n2on-2: free 8.2 GB, cap 7.2 GB, expected peak 0.5 GB, swap 1.19 GB (may grow 1.81)
+08:22:35 END H2-ar-n2on-2: ok, 2 rows, 1s, peak 0.1 GB, swap growth 0.0 GB
+08:22:35 START H2-A-n2off-3: free 8.2 GB, cap 7.2 GB, expected peak 0.5 GB, swap 1.19 GB (may grow 1.81)
+08:22:36 END H2-A-n2off-3: ok, 2 rows, 1s, peak 0.1 GB, swap growth 0.0 GB
+08:22:36 START H2-A-n2on-4: free 8.1 GB, cap 7.1 GB, expected peak 0.5 GB, swap 1.19 GB (may grow 1.81)
+08:22:37 END H2-A-n2on-4: ok, 2 rows, 1s, peak 0.1 GB, swap growth 0.0 GB
+08:22:37 START H2-A-idset-n2on-5: free 8.1 GB, cap 7.1 GB, expected peak 0.5 GB, swap 1.19 GB (may grow 1.81)
+08:22:38 END H2-A-idset-n2on-5: ok, 2 rows, 1s, peak 0.1 GB, swap growth 0.0 GB
+08:22:38 START H2-A-idset-n2on-6: free 8.1 GB, cap 7.1 GB, expected peak 0.5 GB, swap 1.19 GB (may grow 1.81)
+08:22:38 END H2-A-idset-n2on-6: ok, 2 rows, 1s, peak 0.1 GB, swap growth 0.0 GB
+08:22:38 START H2-A-n2on-7: free 8.1 GB, cap 7.1 GB, expected peak 0.5 GB, swap 1.19 GB (may grow 1.81)
+08:22:39 END H2-A-n2on-7: ok, 2 rows, 1s, peak 0.1 GB, swap growth 0.0 GB
+08:22:39 START H2-A-n2off-8: free 8.1 GB, cap 7.1 GB, expected peak 0.5 GB, swap 1.19 GB (may grow 1.81)
+08:22:40 END H2-A-n2off-8: ok, 2 rows, 1s, peak 0.1 GB, swap growth 0.0 GB
+08:22:40 START H2-ar-n2on-9: free 8.1 GB, cap 7.1 GB, expected peak 0.5 GB, swap 1.19 GB (may grow 1.81)
+08:22:41 END H2-ar-n2on-9: ok, 2 rows, 1s, peak 0.1 GB, swap growth 0.0 GB
+08:22:41 START H2-ar-n2off-10: free 8.1 GB, cap 7.1 GB, expected peak 0.5 GB, swap 1.19 GB (may grow 1.81)
+08:22:42 END H2-ar-n2off-10: ok, 2 rows, 1s, peak 0.1 GB, swap growth 0.0 GB
+08:22:42 START H2-optiq-ar-11: free 8.0 GB, cap 7.0 GB, expected peak 0.5 GB, swap 1.19 GB (may grow 1.81)
+08:22:42 END H2-optiq-ar-11: ok, 2 rows, 1s, peak 0.1 GB, swap growth 0.0 GB
+08:22:42 START H3-slow-tests: free 8.0 GB, cap 7.0 GB, expected peak 0.5 GB, swap 1.19 GB (may grow 1.81)
+08:22:43 END H3-slow-tests: ok, 2 rows, 1s, peak 0.1 GB, swap growth 0.0 GB
+08:22:43 NOT RUN H4-e9-prefill: condition false
+08:22:43 HEAVY done in 0.2 min: not run (condition) x1, ok x14

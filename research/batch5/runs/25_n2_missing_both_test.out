@@ -1,0 +1,5 @@
+== old n2.py (integration d3c4a6d), new test
+E       FileNotFoundError: [Errno 2] No such file or directory: '<pytest-tmp>/pytest-1409/test_check_reports_a_file_miss0/Model-OptiQ-4bit/model-00001-of-00002.safetensors'
+1 failed, 21 deselected, 1 warning in 0.07s
+== new n2.py
+22 passed, 5 warnings in 2.57s

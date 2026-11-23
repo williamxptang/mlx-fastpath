@@ -1,0 +1,76 @@
+start 19:16:12
+
+[lossless] width 3: drift 0.000
+[lossless] width 3: drift 0.000
+[lossless] width 3: drift 0.000.
+[ngram] first split vs greedy: stock [0, 23, 11], fastpath [76, 96, 85]
+[lossless] width 9: drift 0.250, split at token 76, stock logit gap 0.000
+[lossless] width 9: drift 0.375F
+[kv4] mean |err| vs exact: stock 0.1194, fast 0.1166; top-1 agreement: stock 0.976, fast 0.965; per prompt {'stock': [0.12185106426477432, 0.1286776214838028, 0.10780924558639526], 'fast': [0.12654754519462585, 0.11921092867851257, 0.1040145605802536]} {'stock': [0.9375, 1.0, 0.9895833730697632], 'fast': [0.9375, 0.9583333730697632, 1.0]}
+.
+=================================== FAILURES ===================================
+_____ test_speedups_keep_greedy_ngram_output_and_the_fold_stays_close[q08] _____
+
+mtp_engine = <optiq.runtime.engine.OptiqEngine object at 0x167e69fd0>
+attention_calls = {'folded_qsdpa': 0, 'folded_sdpa': 276, 'fused_qkv_sdpa': 0}
+
+    def test_speedups_keep_greedy_ngram_output_and_the_fold_stays_close(mtp_engine, attention_calls):
+        """Reference: plain greedy decoding (optiq's AR loop), not stock n-gram. Stock optiq 0.8.5's n-gram + MTP path is
+        not greedy on quantized Qwen3.5: its head pricing runs 5 target steps on the live, untrimmable hybrid cache
+        (research/batch5/results.md); fastpath swaps that pricing out. Stock's own distance is printed, not asserted."""
+        import mlx_fastpath as fp
+        ids = [_prompt_ids(mtp_engine, p) for p in PROMPTS]
+        fp.remove()
+        greedy = [_ids(mtp_engine, mtp_engine.generate("", prompt_ids=x, max_tokens=MAX_TOKENS, depth=0).text) for x in ids]
+        stock = [_ngram_from_clean_state(mtp_engine, x) for x in ids]
+        try:
+            assert fp.apply(), "apply() ran stock: installed versions differ from apply.TESTED"
+            fast = [_ngram_from_clean_state(mtp_engine, x) for x in ids]
+        finally:
+            fp.remove()
+        first_split = lambda a, b: next((k for k, (x, y) in enumerate(zip(a, b)) if x != y), min(len(a), len(b)))
+        print(f"\n[ngram] first split vs greedy: stock {[first_split(g, s) for g, s in zip(greedy, stock)]}, "
+              f"fastpath {[first_split(g, f) for g, f in zip(greedy, fast)]}", end="")
+>       _assert_same_or_near_tie(mtp_engine, ids, greedy, fast, NGRAM_WIDTH)
+
+tests/test_lossless_slow.py:213: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+engine = <optiq.runtime.engine.OptiqEngine object at 0x167e69fd0>
+prompt_ids = [[248045, 846, 198, 814, 20139, 303, ...], [248045, 846, 198, 7734, 264, 12654, ...], [248045, 846, 198, 32, 5257, 10583, ...]]
+stock = [[760, 12515, 7701, 6105, 4016, 310, ...], [71093, 12305, 198, 727, 73111, 1393, ...], [1206, 1423, 279, 2984, 314, 279, ...]]
+fast = [[760, 12515, 7701, 6105, 4016, 310, ...], [71093, 12305, 198, 727, 73111, 1393, ...], [1206, 1423, 279, 2984, 314, 279, ...]]
+block = 9
+
+    def _assert_same_or_near_tie(engine, prompt_ids, stock, fast, block):
+        """stock / fast: generated token ids per prompt (EOS excluded)."""
+        eos = min(engine._eos_ids())                            # a set of ids; any one stands for "ended"
+        agreed = 0
+        for ids, s, f in zip(prompt_ids, stock, fast):
+            a, b = list(s) + [eos], list(f) + [eos]               # a text ends on EOS: one more position to score
+            ref = _logits_along(engine, ids, a, block=block, mode="stock")
+            drift = mx.abs(ref - _logits_along(engine, ids, a, block=block, mode="fast")).max().item()
+            print(f"\n[lossless] width {block}: drift {drift:.3f}", end="")
+>           assert drift <= DRIFT_CEILING, f"speedups move logits by {drift:.3f} > {DRIFT_CEILING}"
+E           AssertionError: speedups move logits by 0.375 > 0.25
+E           assert 0.375 <= 0.25
+
+tests/test_lossless_slow.py:142: AssertionError
+=============================== warnings summary ===============================
+tests/test_lossless_slow.py::test_speedups_keep_greedy_mtp_output_with_a_bf16_cache[q08]
+  <frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+
+tests/test_lossless_slow.py::test_speedups_keep_greedy_mtp_output_with_a_bf16_cache[q08]
+  <frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_lossless_slow.py::test_speedups_keep_greedy_mtp_output_with_a_bf16_cache[q08]
+PASSED tests/test_lossless_slow.py::test_speedups_are_no_less_accurate_than_stock_with_a_4bit_cache[q08]
+FAILED tests/test_lossless_slow.py::test_speedups_keep_greedy_ngram_output_and_the_fold_stays_close[q08]
+1 failed, 2 passed, 4 deselected, 2 warnings in 58.53s
+<sys>:0: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+exit=1
+end 19:17:14
+vm.swapusage: total = 3072.00M  used = 1792.69M  free = 1279.31M  (encrypted)

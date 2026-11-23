@@ -1,0 +1,19 @@
+start 20:09:35
+Traceback (most recent call last):
+  File "<repo>/research/batch5/ab/build_weights.py", line 15, in <module>
+    with MemoryGuard(min_free_gb=float(sys.argv[2]), max_footprint_gb=float(sys.argv[3])) as g:
+         ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>/mlx_fastpath/guard.py", line 63, in __enter__
+    raise RuntimeError(f"[MemoryGuard] only {have:.1f} GB free, need {self.min_free} GB: not starting")
+RuntimeError: [MemoryGuard] only 11.7 GB free, need 12.0 GB: not starting
+exit=1
+end 20:09:43
+--- retry with cap 7 GB (first try: guard refused, 11.7 GB free < 12)
+start 20:09:57
+[INFO] Loading
+[INFO] Using dtype: bfloat16
+[INFO] Quantizing
+[INFO] Quantized model with 4.501 bits per weight.
+[guard] {'peak_footprint_gb': 5.44, 'swap_growth_gb': 0.0} MLX peak GB 7.01
+exit=0
+end 20:10:17

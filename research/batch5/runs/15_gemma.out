@@ -1,0 +1,22 @@
+start 19:26:59
+
+[lossless] width 1: drift 0.000, stock shape shift 0.000
+[lossless] width 1: drift 0.000, stock shape shift 0.000
+[lossless] width 1: drift 0.000, stock shape shift 0.000.
+[memory] {'peak_footprint_gb': 5.59, 'swap_growth_gb': 0.0}
+=============================== warnings summary ===============================
+tests/test_lossless_slow.py::test_the_prefill_swap_keeps_plain_decoding_output_on_a_model_without_mtp[gemma]
+  <frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+
+tests/test_lossless_slow.py::test_the_prefill_swap_keeps_plain_decoding_output_on_a_model_without_mtp[gemma]
+  <frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_lossless_slow.py::test_the_prefill_swap_keeps_plain_decoding_output_on_a_model_without_mtp[gemma]
+1 passed, 6 deselected, 2 warnings in 43.00s
+<sys>:0: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+exit=0
+end 19:27:45
+vm.swapusage: total = 3072.00M  used = 1792.69M  free = 1279.31M  (encrypted)

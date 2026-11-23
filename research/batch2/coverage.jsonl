@@ -1,0 +1,11 @@
+{"source": "dflash.jsonl", "prompt": "chat", "out_tokens": 300, "miss_32k": 0.0267, "miss_32k_prompt": 0.0267, "extra_rows": 5}
+{"source": "dflash.jsonl", "prompt": "math", "out_tokens": 300, "miss_32k": 0.0433, "miss_32k_prompt": 0.04, "extra_rows": 10}
+{"source": "dflash.jsonl", "prompt": "code_edit", "out_tokens": 300, "miss_32k": 0.12, "miss_32k_prompt": 0.0, "extra_rows": 35}
+{"source": "dflash.jsonl", "prompt": "needle_4k", "out_tokens": 300, "miss_32k": 0.1067, "miss_32k_prompt": 0.0467, "extra_rows": 184}
+{"source": "dflash.jsonl", "prompt": "needle_16k", "out_tokens": 300, "miss_32k": 0.1, "miss_32k_prompt": 0.0133, "extra_rows": 565}
+{"source": "crossover.jsonl", "prompt": "needle_6k", "out_tokens": 300, "miss_32k": 0.1167, "miss_32k_prompt": 0.0367, "extra_rows": 273}
+{"source": "crossover.jsonl", "prompt": "needle_8k", "out_tokens": 300, "miss_32k": 0.1433, "miss_32k_prompt": 0.0267, "extra_rows": 326}
+{"source": "crossover.jsonl", "prompt": "needle_10k", "out_tokens": 300, "miss_32k": 0.13, "miss_32k_prompt": 0.03, "extra_rows": 392}
+{"source": "crossover.jsonl", "prompt": "needle_12k", "out_tokens": 300, "miss_32k": 0.1067, "miss_32k_prompt": 0.0233, "extra_rows": 456}
+{"source": "long_out.jsonl", "prompt": "code_edit", "out_tokens": 616, "miss_32k": 0.1104, "miss_32k_prompt": 0.0, "extra_rows": 35}
+{"source": "long_out.jsonl", "prompt": "copy_table", "out_tokens": 393, "miss_32k": 0.0229, "miss_32k_prompt": 0.0051, "extra_rows": 39}
