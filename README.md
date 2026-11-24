@@ -36,9 +36,18 @@ Versions: `mlx-fastpath versions`.
 - `draft`: 32k-vocab MTP draft head (engine MTP and optiq's n-gram speculator), optiq's fused GDN capture.
 - `prefill`: LM head on the last prompt position only, 1024-token chunks.
 - `guard`: `MemoryGuard`. `load`: safe load order.
+- `assistant`: optiq's Gemma 4 `-assistant` drafting loop with a settable draft length. `apply(assistant_gamma=1)`
+  replaces `optiq serve --drafter`'s fixed 2: on E2B int4 (M1) gamma 1 was faster in all 26 runs measured, +6.7% mean.
+  `"auto"` (per-pass choice) is opt-in: it averaged level with gamma 2, below the best fixed gamma
+  (`research/gemma/results.md`). Default: optiq's loop untouched.
+- In mlx-lm's own loop (no optiq engine), only `attention` acts: `attention.enable()`, then mlx-lm with
+  `kv_bits=4` decodes 1.07-1.49x faster at 16k-32k on Qwen3.5 0.8B/2B (M1); tokens split at close calls, no measurable accuracy difference
+  (`research/mlxlm/results.md`).
 
 ## Develop / release
 - Prototypes and evidence: `research/` (Kmic-68 study in `research/kmic68/`). Not installed.
+- `research/loop/`: looping a block of a normal Qwen3.5's layers (no training: 0.4-1.9% of the gap to the next size; a small learned gate
+  trained on the research notes improved unseen WikiText where a same-size plain adapter did not). Research only.
 - Install into the env that already has mlx, mlx-lm and mlx-optiq: `pip install --no-deps --no-build-isolation .`
 - Tests: `pytest` (fast set, < 10 s, each test < 1 s); `MLX_FASTPATH_SLOW=1 pytest -m slow` loads the real model (~30 s, ≤ 9 GB).
 - Version: root `VERSION` only; +0.0.1 per commit with a changelog line and tag `v<version>`.
@@ -51,6 +60,9 @@ Versions: `mlx-fastpath versions`.
 - Left out: the prompt corpora (`prompts*.json`), generated texts (`*_texts.json`), run plans and launch
   scripts, research lane notes, environment freezes and a raw power log. Regenerate prompts with the
   `make_prompts*.py` scripts; their source text differs from the original, so token counts will too.
+- `research/loop/` trains and scores on the repo's research notes (`doc_split.txt`); some listed notes (run plans,
+  lane notes) are not in this copy, so its notes-based numbers (TEST-A) cannot be re-run exactly from here. The
+  WikiText-2 numbers (TEST-B) can.
 
 ## Related
 - Two optiq 0.8.5 issues found here (n-gram + MTP draft-cost pricing, prefill LM head) are described in

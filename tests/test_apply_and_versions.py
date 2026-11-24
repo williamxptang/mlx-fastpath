@@ -44,20 +44,22 @@ def test_apply_then_remove_restores_stock():
     import mlx_lm.models.qwen3_next as qn
     import optiq.runtime.mtp.gdn_capture as gc
     from optiq.runtime import ngram_spec
+    import optiq.runtime.spec as spec
     from optiq.runtime.engine import OptiqEngine
     stock = (qn.scaled_dot_product_attention, OptiqEngine._mtp_draft, gc.forward_with_gdn_capture,
-             OptiqEngine._prefill_chunked, ngram_spec.MtpDrafter)
+             OptiqEngine._prefill_chunked, ngram_spec.MtpDrafter, spec.assistant_generate_step)
     try:
-        done = mlx_fastpath.apply()
-        assert set(done) == {"attention_dispatch", "draft_vocab", "ngram_mtp_drafter", "fused_capture", "prefill_step"}
+        done = mlx_fastpath.apply(assistant_gamma="auto")
+        assert set(done) == {"attention_dispatch", "draft_vocab", "ngram_mtp_drafter", "fused_capture", "prefill_step",
+                             "assistant_gamma"}
         now = (qn.scaled_dot_product_attention, OptiqEngine._mtp_draft, gc.forward_with_gdn_capture,
-               OptiqEngine._prefill_chunked, ngram_spec.MtpDrafter)
+               OptiqEngine._prefill_chunked, ngram_spec.MtpDrafter, spec.assistant_generate_step)
         assert all(a is not b for a, b in zip(now, stock)), "every speedup must be swapped in"
     finally:
         mlx_fastpath.remove()
     assert qn.scaled_dot_product_attention is base.scaled_dot_product_attention
     assert (qn.scaled_dot_product_attention, OptiqEngine._mtp_draft, gc.forward_with_gdn_capture,
-            OptiqEngine._prefill_chunked, ngram_spec.MtpDrafter) == stock
+            OptiqEngine._prefill_chunked, ngram_spec.MtpDrafter, spec.assistant_generate_step) == stock
 
 
 def test_untested_versions_run_stock(monkeypatch):
@@ -72,3 +74,36 @@ def test_untested_versions_run_stock(monkeypatch):
 @pytest.mark.parametrize("tokens,kv_bits", [(500, None), (16_000, None), (32_000, 4)])
 def test_long_prompts_switch_to_4bit_kv(tokens, kv_bits):
     assert mlx_fastpath.recommended(tokens) == {"depth": 2, "kv_bits": kv_bits}
+
+
+def test_by_default_optiqs_assistant_loop_is_left_alone():
+    import optiq.runtime.spec as spec
+    before = spec.assistant_generate_step
+    try:
+        done = mlx_fastpath.apply()
+        assert "assistant_gamma" not in done
+        assert spec.assistant_generate_step is before
+    finally:
+        mlx_fastpath.remove()
+
+
+def test_untested_versions_leave_the_assistant_loop_alone_too(monkeypatch):
+    import optiq.runtime.spec as spec
+    before = spec.assistant_generate_step
+    monkeypatch.setattr(apply_mod, "installed_versions", lambda: {**apply_mod.TESTED, "mlx-optiq": "9.9.9"})
+    with pytest.warns(UserWarning, match="untested versions"):
+        assert mlx_fastpath.apply(assistant_gamma=2) == {}
+    assert spec.assistant_generate_step is before
+
+
+def test_every_version_tag_holds_its_own_version():
+    """A tag v<x> must point at a commit whose VERSION first line is x."""
+    r = subprocess.run(["git", "tag", "--list", "v*"], cwd=ROOT, capture_output=True, text=True)
+    tags = [t for t in r.stdout.split() if re.fullmatch(r"v\d+\.\d+\.\d+", t)]
+    assert tags, "the repo has version tags"
+    wrong = []
+    for t in tags:
+        v = subprocess.run(["git", "show", f"{t}:VERSION"], cwd=ROOT, capture_output=True, text=True)
+        if v.returncode != 0 or v.stdout.splitlines()[0].strip() != t[1:]:
+            wrong.append(t)
+    assert not wrong, f"tags whose commit holds another version: {wrong}"

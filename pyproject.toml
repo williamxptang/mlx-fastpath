@@ -16,6 +16,6 @@ mlx-fastpath = "mlx_fastpath.cli:main"
 packages = ["mlx_fastpath"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+testpaths = ["tests", "research/loop"]
 markers = ["slow: loads a real model (opt-in: MLX_FASTPATH_SLOW=1)"]
 addopts = "-m 'not slow'"

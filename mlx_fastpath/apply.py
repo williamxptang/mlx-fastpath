@@ -2,7 +2,7 @@
 import warnings
 from importlib.metadata import PackageNotFoundError, version
 
-from . import attention, draft, prefill
+from . import assistant, attention, draft, prefill
 
 # Versions every speedup here was measured and audited on (M5, 2026-11-19; re-validated on Qwen3.5 0.8B/2B + Gemma 4 E2B, 2026-11-22).
 TESTED = {"mlx": "0.32.4", "mlx-lm": "0.32.2", "mlx-optiq": "0.8.5"}
@@ -20,10 +20,16 @@ def installed_versions():
 
 
 def apply(*, attention_dispatch=True, draft_vocab=draft.DEFAULT_VOCAB, draft_prompt_ids=False, fused_capture=True,
-          prefill_step=prefill.DEFAULT_STEP, force=False):
+          prefill_step=prefill.DEFAULT_STEP, assistant_gamma=None, force=False):
     """Swap the speedups in at runtime. Returns what was enabled. Nothing on disk is changed.
     draft_prompt_ids: MTP drafts may also pick the prompt's own ids above draft_vocab. Default off: +5-12% on DFlash
-    drafts, but only -1.5 to +1.9% on MTP (results.md §18.2, under its +3% bar). Lossless either way."""
+    drafts, but only -1.5 to +1.9% on MTP (results.md §18.2, under its +3% bar). Lossless either way.
+    assistant_gamma: Gemma 4 `-assistant` drafting (optiq's loop, `optiq serve --drafter`, which hardcodes gamma=2).
+    None (default): no change to optiq's loop (an earlier setting stays until remove()). An int: that draft length (on M1, E2B int4 was 1.3-11.4% faster at 1 than at 2).
+    "auto": per-pass choice, opt-in only: on M1 it averaged level with gamma 2, below the best fixed gamma
+    (research/gemma)."""
+    if assistant_gamma is not None:
+        assistant.check_gamma(assistant_gamma)              # before anything is swapped in
     found = installed_versions()
     mismatch = {p: (found[p], want) for p, want in TESTED.items() if found[p] != want}
     if mismatch and not force:
@@ -42,6 +48,8 @@ def apply(*, attention_dispatch=True, draft_vocab=draft.DEFAULT_VOCAB, draft_pro
         draft.enable_fused_capture(); done["fused_capture"] = True
     if prefill_step:
         prefill.enable(prefill_step); done["prefill_step"] = prefill_step
+    if assistant_gamma is not None:
+        assistant.enable(assistant_gamma); done["assistant_gamma"] = assistant_gamma
     return done
 
 
@@ -50,6 +58,7 @@ def remove():
     draft.disable_reduced_vocab()
     draft.disable_fast_mtp_drafter()
     draft.disable_fused_capture()
+    assistant.disable()
     prefill.disable()
 
 

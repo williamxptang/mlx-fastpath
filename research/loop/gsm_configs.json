@@ -1,0 +1,1 @@
+[{"name": "plain"}, {"name": "loopgate_notes", "block": [4, 8], "passes": 2, "gate": "T1_lowrank_b4-8_a0.1_notes_2b.safetensors", "gate_kind": "lowrank", "rank": 32}]
